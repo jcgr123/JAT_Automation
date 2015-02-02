@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [JAT_Test_Suite]">
+  <test name="Project(failed)">
+    <classes>
+      <class name="tests.TestCreateUserStoriesWithDataprovider">
+        <methods>
+          <include name="cleanEnvironment"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.TestCreateUserStoriesWithDataprovider -->
+      <class name="tests.TestCreateNewUserStoriesWithExcel">
+        <methods>
+          <include name="cleanEnvironment"/>
+          <include name="setup"/>
+          <include name="verifyNewUserStoryIsCreatedWithTasksCorrectly"/>
+        </methods>
+      </class> <!-- tests.TestCreateNewUserStoriesWithExcel -->
+      <class name="tests.StartTestSuite">
+        <methods>
+          <include name="quit"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- tests.StartTestSuite -->
+    </classes>
+  </test> <!-- Project(failed) -->
+</suite> <!-- Failed suite [JAT_Test_Suite] -->

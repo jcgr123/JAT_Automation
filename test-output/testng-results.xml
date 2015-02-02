@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="8" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="JAT_Test_Suite" duration-ms="45148" started-at="2015-02-02T14:47:28Z" finished-at="2015-02-02T14:48:13Z">
+    <groups>
+    </groups>
+    <test name="Project" duration-ms="45148" started-at="2015-02-02T14:47:28Z" finished-at="2015-02-02T14:48:13Z">
+      <class name="tests.TestCreateUserStoriesWithDataprovider">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestCreateUserStoriesWithDataprovider@70cf32e3]" name="setup" is-config="true" duration-ms="2906" started-at="2015-02-02T10:47:43Z" finished-at="2015-02-02T10:47:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testMethod(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.TestCreateUserStoriesWithDataprovider@70cf32e3]" name="testMethod" duration-ms="3906" started-at="2015-02-02T10:47:46Z" data-provider="SearchProvider" finished-at="2015-02-02T10:47:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Story1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Bug]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Unstarted]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Juan Carlos Guevara Ramirez]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Description 1]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Optimized poorly]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethod -->
+        <test-method status="PASS" signature="testMethod(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.TestCreateUserStoriesWithDataprovider@70cf32e3]" name="testMethod" duration-ms="2672" started-at="2015-02-02T10:47:49Z" data-provider="SearchProvider" finished-at="2015-02-02T10:47:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Story2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Spike]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Unstarted]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Juan Carlos Guevara Ramirez]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Description 2]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Optimized medium]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethod -->
+        <test-method status="PASS" signature="testMethod(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.TestCreateUserStoriesWithDataprovider@70cf32e3]" name="testMethod" duration-ms="2797" started-at="2015-02-02T10:47:52Z" data-provider="SearchProvider" finished-at="2015-02-02T10:47:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Story3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Bug]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Unstarted]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Juan Carlos Guevara Ramirez]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Description 3]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Optimized high]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethod -->
+        <test-method status="PASS" signature="cleanEnvironment()[pri:0, instance:tests.TestCreateUserStoriesWithDataprovider@70cf32e3]" name="cleanEnvironment" is-config="true" duration-ms="1765" started-at="2015-02-02T10:47:55Z" finished-at="2015-02-02T10:47:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanEnvironment -->
+      </class> <!-- tests.TestCreateUserStoriesWithDataprovider -->
+      <class name="tests.TestCreateNewUserStoriesWithExcel">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestCreateNewUserStoriesWithExcel@536f2a7e]" name="setup" is-config="true" duration-ms="2078" started-at="2015-02-02T10:47:57Z" finished-at="2015-02-02T10:47:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verifyNewUserStoryIsCreatedWithTasksCorrectly(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.TestCreateNewUserStoriesWithExcel@536f2a7e]" name="verifyNewUserStoryIsCreatedWithTasksCorrectly" duration-ms="3641" started-at="2015-02-02T10:48:01Z" data-provider="UserStoryData" finished-at="2015-02-02T10:48:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Story4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Feature]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Unstarted]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Juan Carlos Guevara Ramirez]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Description 4]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Poorly Optimized ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNewUserStoryIsCreatedWithTasksCorrectly -->
+        <test-method status="PASS" signature="verifyNewUserStoryIsCreatedWithTasksCorrectly(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.TestCreateNewUserStoriesWithExcel@536f2a7e]" name="verifyNewUserStoryIsCreatedWithTasksCorrectly" duration-ms="3187" started-at="2015-02-02T10:48:05Z" data-provider="UserStoryData" finished-at="2015-02-02T10:48:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Story5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Bug]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Unstarted]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Juan Carlos Guevara Ramirez]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Description 5]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Medium Optimized ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNewUserStoryIsCreatedWithTasksCorrectly -->
+        <test-method status="PASS" signature="verifyNewUserStoryIsCreatedWithTasksCorrectly(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.TestCreateNewUserStoriesWithExcel@536f2a7e]" name="verifyNewUserStoryIsCreatedWithTasksCorrectly" duration-ms="3782" started-at="2015-02-02T10:48:08Z" data-provider="UserStoryData" finished-at="2015-02-02T10:48:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Story6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Feature]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Unstarted]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Juan Carlos Guevara Ramirez]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Description 6]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Highly Optimized ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNewUserStoryIsCreatedWithTasksCorrectly -->
+        <test-method status="PASS" signature="cleanEnvironment()[pri:0, instance:tests.TestCreateNewUserStoriesWithExcel@536f2a7e]" name="cleanEnvironment" is-config="true" duration-ms="1687" started-at="2015-02-02T10:48:12Z" finished-at="2015-02-02T10:48:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanEnvironment -->
+      </class> <!-- tests.TestCreateNewUserStoriesWithExcel -->
+      <class name="tests.TestUpdateProject">
+        <test-method status="PASS" signature="verifyNewProjectIsUpdatedCorrectly()[pri:0, instance:tests.TestUpdateProject@4a8355dd]" name="verifyNewProjectIsUpdatedCorrectly" duration-ms="8390" started-at="2015-02-02T10:47:34Z" finished-at="2015-02-02T10:47:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNewProjectIsUpdatedCorrectly -->
+      </class> <!-- tests.TestUpdateProject -->
+      <class name="tests.TestCreateNewProject">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.TestCreateNewProject@302c971f]" name="setup" is-config="true" duration-ms="16" started-at="2015-02-02T10:47:28Z" finished-at="2015-02-02T10:47:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verifyNewProjectIsCreatedCorrectly()[pri:0, instance:tests.TestCreateNewProject@302c971f]" name="verifyNewProjectIsCreatedCorrectly" duration-ms="5906" started-at="2015-02-02T10:47:28Z" finished-at="2015-02-02T10:47:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNewProjectIsCreatedCorrectly -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.TestUpdateProject@4a8355dd]" name="setUp" is-config="true" duration-ms="0" started-at="2015-02-02T10:47:28Z" finished-at="2015-02-02T10:47:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+      </class> <!-- tests.TestCreateNewProject -->
+      <class name="tests.StartTestSuite">
+        <test-method status="PASS" signature="init()[pri:0, instance:tests.StartTestSuite@4d0d9fe7]" name="init" is-config="true" duration-ms="2023" started-at="2015-02-02T10:47:26Z" finished-at="2015-02-02T10:47:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:tests.StartTestSuite@4d0d9fe7]" name="quit" is-config="true" duration-ms="969" started-at="2015-02-02T10:48:14Z" finished-at="2015-02-02T10:48:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- tests.StartTestSuite -->
+    </test> <!-- Project -->
+  </suite> <!-- JAT_Test_Suite -->
+</testng-results>

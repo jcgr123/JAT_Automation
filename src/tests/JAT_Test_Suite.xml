@@ -1,0 +1,11 @@
+<suite name="JAT_Test_Suite">
+     <test name = "Project">
+           <classes>
+                <class name="tests.StartTestSuite" />
+                <class name="tests.TestCreateNewProject" />  
+				<class name="tests.TestUpdateProject" />   
+				<class name="tests.TestCreateUserStoriesWithDataprovider" />
+				<class name="tests.TestCreateNewUserStoriesWithExcel" />         				
+           </classes>
+      </test>
+</suite>
