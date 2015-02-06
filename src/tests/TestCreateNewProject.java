@@ -1,52 +1,38 @@
 package tests;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
 
 import pages.Dashboard;
 import pages.Project;
 import pages.UserStory;
+import parameters.DataproviderClass;
 
 /**
  *  * 
  * @author carlos guevara
  *
  */
-
 public class TestCreateNewProject {
-
-	public WebDriver driver;
-
-	Dashboard objDashboard;
-	Project objNewProject;
-	UserStory objUserStoriesPage;
-
-	@BeforeTest
-
-	public void setup(){
-		// create objects
-		objNewProject = new Project();
-		objDashboard = new Dashboard();
-		objUserStoriesPage = new UserStory();	
-	}
-
+	
 	/*
 	 * This test creates a new project  
-	 * Verify the user name using Dashboard message
+	 * Verify the project name using User Story label
 	 */
-	@Test
-
-	public void verifyNewProjectIsCreatedCorrectly(){  
-
-		String projectName = "1stNewProject";
-		String iterationsNumber = "2";
-		objDashboard.clickNewProject();  
-		objNewProject.createNewProject(projectName,iterationsNumber);
-		//Verify New Project is created
-		Assert.assertTrue(objDashboard.getProjectName().contains(projectName));
-		objUserStoriesPage.clickDashboardButton();
-		objDashboard.deleteProject();
-		objDashboard.confirmDelete();
+	@Test(dataProvider = "createProject", dataProviderClass = DataproviderClass.class)
+	public void verifyNewProjectIsCreatedCorrectly(String projectName, String iterationsNumber) {  
+		Dashboard objDashboard = new Dashboard();
+		Project objProject = objDashboard.clickNewProject();
+	    UserStory objUserStory = objProject.createNewProject(projectName, iterationsNumber);
+		Assert.assertEquals(objUserStory.getProjectName(), projectName);		
+	}
+	
+	@AfterClass
+	public void cleanEnvironment() {
+		UserStory objUserStory = new UserStory();
+		Dashboard objDashboard = objUserStory.clickDashboardBtn();
+		objDashboard.deleteProject()
+					.confirmDelete();
 	}
 }

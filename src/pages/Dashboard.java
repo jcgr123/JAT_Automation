@@ -12,19 +12,15 @@ import common.SeleniumDriverManager;
  * @author carlos guevara
  *
  */
-
 public class Dashboard {
 
 	public WebDriver driver;
-
-	@FindBy(xpath = "//div[2]/div/section/div[2]")
-	WebElement projectName;
-
+	
 	@FindBy(xpath = "//ul/span[@title='email']")
 	WebElement userName;
 
 	@FindBy(xpath = "//div[2]/button")
-	WebElement buttonNewProject;
+	WebElement btnNewProject;
 
 	@FindBy(xpath = "//td[7]/div/a")
 	WebElement deleteProject;
@@ -41,59 +37,56 @@ public class Dashboard {
 	@FindBy(xpath = "//ul/span[@title='email']")
 	WebElement getUserName;
 
-	public Dashboard(){ 
+	public Dashboard() { 
 		this.driver = SeleniumDriverManager.getManager().getDriver();
 		PageFactory.initElements(driver, this); 
-	}
-
-	/**
-	 * Get  NewProject Name 
-	 * @return
-	 */
-	public String getProjectName(){
-		return projectName.getText();
 	}
 
 	/**
 	 * Get the User name from Home Page 
 	 * @return
 	 */
-	public String getUserName(){
+	public String getUserName() {
 		return getUserName.getText();
 	}
 
 	/**
 	 * Click on NewProject button   
 	 */
-	public  void clickNewProject(){   	 
-		buttonNewProject.click();
+	public  Project clickNewProject() {   	 
+		btnNewProject.click();		
+		return new Project();
 	}
 
 	/**
 	 * Click on NewProject button   
 	 */
-	public  void deleteProject(){   	 
+	public  Dashboard deleteProject() {   	 
 		deleteProject.click();
+		return this;
 	}
 
 	/**
 	 * Click on confirmation request  
 	 */
-	public  void confirmDelete(){   	 
+	public  Dashboard confirmDelete() {   	 
 		confirmDelete.click();
+		return this;
 	}
 
 	/**
 	 * Click on update link   
 	 */
-	public  void clickUpdateProject(){   	 
+	public  Project clickUpdateProject() {   	 
 		updateProject.click();
+		return new Project();
 	}
 
 	/**
-	 * Click on update link   
+	 * Click on first project link   
 	 */
-	public  void clickSelectFirstProject(){   	 
+	public  UserStory clickSelectFirstProject() {   	 
 		selectFirstProject.click();
+		return new UserStory();
 	}
 }

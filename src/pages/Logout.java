@@ -10,26 +10,33 @@ import common.SeleniumDriverManager;
 public class Logout {
 
 	public WebDriver driver;
-	@FindBy(xpath ="//div/span")
+	
+	@FindBy(xpath = "//div/span")
 	WebElement dropdown;
+	
 	@FindBy(linkText = "Logout")
 	WebElement logoutLink;
 
-
-
-	public Logout(){
+	public Logout() {
 		this.driver = SeleniumDriverManager.getManager().getDriver();
 		PageFactory.initElements(driver, this);
 	}
 
-	public void clickDropdown(){
+	/**
+	 * click on dropdown icon
+	 */
+	public void clickDropdown() {
 		dropdown.click();
 	}
-	public void clickLogout(){
+
+	/**
+	 * click on logout
+	 */
+	public void clickLogout() {
 		logoutLink.click();
 	}
 
-	public void logout(){
+	public void logoutOfJAT() {
 		clickDropdown();
 		clickLogout();
 	}

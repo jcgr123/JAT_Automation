@@ -12,138 +12,121 @@ import common.SeleniumDriverManager;
  * @author carlos guevara
  *
  */
-
 public class AddStory {
 
 	public WebDriver driver;
-	UserStory userStoriesPage = new UserStory();
 
-	@FindBy(id="us-title")
-	WebElement newStoryTitle;
+	@FindBy(id = "us-title")
+	WebElement newUserStoryName;
 
 	@FindBy(id = "us-type")
-	WebElement newStoryType;
+	WebElement newUserStoryType;
 
 	@FindBy(id = "us-points-")
-	WebElement newStoryPoints;
+	WebElement newUserStoryPoints;
 
 	@FindBy(xpath = "//form[@id='createFormUS']/fieldset/div[4]/div/div[2]/select")
-	WebElement newStoryState;
+	WebElement newUserStoryState;
 
 	@FindBy(id = "us-owner-")
 	WebElement newStoryOwner;
 
 	@FindBy(id = "txt-description")
-	WebElement newStoryDescription;
+	WebElement newUserStoryDescription;
 
 	@FindBy(id = "txt-acceptance")
-	WebElement newStoryAcceptance;
+	WebElement newUserStoryAcceptance;
 
 	@FindBy(id = "createUS")
-	WebElement saveStory;
+	WebElement saveUserStory;
 
-	public AddStory(){
+	public AddStory() {
 		this.driver = SeleniumDriverManager.getManager().getDriver();		 
 		PageFactory.initElements(driver, this);
 	}
 
-	public String getNewStory(){   	 
-		return newStoryTitle.getText();              
+	public String getNewStoryName() {   	 
+		return newUserStoryName.getText();              
 	}
 
 	/**
-	 * Set UserStory name in textbox   
-	 * @param strNewStory
+	 * Set UserStory name in UserStory textbox   
+	 * @param userStoryName contains the name of the user story 
 	 */
-	public void setNewStory(String strNewStory){
-		newStoryTitle.click();
-		newStoryTitle.sendKeys(strNewStory);        
+	public void setNewStoryName(String userStoryName) {
+		newUserStoryName.click();
+		newUserStoryName.sendKeys(userStoryName);        
 	}
 
 	/**
-	 * Set UserStory name in Checkbox   
-	 * @param strNewType
+	 * Set UserStory type in Checkbox   
+	 * @param userStoryType contains the type of the user story
 	 */
-	public void setNewType(String strNewType){
-
-		newStoryType.sendKeys(strNewType);        
+	public void setNewStoryType(String userStoryType) {
+		newUserStoryType.sendKeys(userStoryType);        
 	}
 
 	/**
 	 * Set UserStory Points in Checkbox 
-	 * @param strNewPoints
+	 * @param userStoryPoints contains the points given to the user story
 	 */
-	public void setNewPoints(String strNewPoints){
-		newStoryPoints.sendKeys(strNewPoints);        
+	public void setNewStoryPoints(String userStoryPoints) {
+		newUserStoryPoints.sendKeys(userStoryPoints);        
 	}
 
 	/**
 	 * Set UserStory State in Checkbox 
-	 * @param strStoryState
+	 * @param userStoryState displays user story state
 	 */
-	public void setNewState(String strStoryState){
-		newStoryTitle.click();
-		newStoryState.sendKeys(strStoryState);        
+	public void setNewStoryState(String userStoryState) {
+		newUserStoryName.click();
+		newUserStoryState.sendKeys(userStoryState);        
 	}
 
-	//Set UserStory Owner in Checkbox 
-	public void setNewOwner(String strNewOwner){
-		newStoryOwner.sendKeys(strNewOwner);        
+	/**
+	 * Set UserStory Owner in Checkbox 
+	 * @param userStoryOwner displays user story owner
+	 */
+	public void setNewStoryOwner(String userStoryOwner) {
+		newStoryOwner.sendKeys(userStoryOwner);        
 	}
 
 	/**
 	 * Set UserStory Description in textbox
-	 * @param strNewDescription
+	 * @param userStoryDescription displays user story description
 	 */
-	public void setNewDescription(String strNewDescription){
-		newStoryDescription.sendKeys(strNewDescription);        
+	public void setNewStoryDescription(String userStoryDescription) {
+		newUserStoryDescription.sendKeys(userStoryDescription);        
 	}
 
 	/**
 	 * Set UserStory Acceptance in textbox
-	 * @param strNewAcceptance
+	 * @param userStoryAcceptance
 	 */
-	public void setNewAcceptance(String strNewAcceptance){
-		newStoryAcceptance.sendKeys(strNewAcceptance);        
+	public void setNewStoryAcceptance(String userStoryAcceptance) {
+		newUserStoryAcceptance.sendKeys(userStoryAcceptance);        
 	}
 
 	/**
 	 * Click on Save button
 	 */
-	public void clickSaveStory(){
-		saveStory.click();
+	public void clickSaveUserStory() {
+		saveUserStory.click();
 	}
-
 
 	public UserStory createNewStory(String strNewStory, String strNewType,
 			String strNewPoints, String strStoryState,
 			String strNewOwner, String strNewDescription,
-			String strNewAcceptance){ 	
+			String strNewAcceptance) { 	
 
-		//Fill Story Title  
-		this.setNewStory(strNewStory);
-
-		//Fill Story Type  
-		this.setNewType(strNewType);
-
-		//Fill Story Points  
-		this.setNewPoints(strNewPoints);
-
-		//Fill Story State  
-		this.setNewState(strStoryState);
-
-		//Fill Story Owner  
-		this.setNewOwner(strNewOwner);
-
-		//Fill Story Description  
-		this.setNewDescription(strNewDescription);
-
-		//Fill Story Acceptance  
-		this.setNewAcceptance(strNewAcceptance);
-
-		//Click Login button
-		this.clickSaveStory();
-
+		this.setNewStoryName(strNewStory); 
+		this.setNewStoryType(strNewType);
+		this.setNewStoryPoints(strNewPoints);
+		this.setNewStoryState(strStoryState);
+		this.setNewStoryOwner(strNewOwner);
+		this.setNewStoryDescription(strNewDescription); 
+		this.setNewStoryAcceptance(strNewAcceptance);
+		this.clickSaveUserStory();
 		return new UserStory();
 	} 
 }

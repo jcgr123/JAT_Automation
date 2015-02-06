@@ -12,15 +12,13 @@ import common.SeleniumDriverManager;
  * @author carlos guevara
  *
  */
-
 public class Project {
 
-	Dashboard dashboard = new Dashboard();
 	UserStory userStoriesPage = new UserStory();
 
 	public WebDriver driver;	
 
-	@FindBy(css="div.project-name.ng-binding")
+	@FindBy(css = "div.project-name.ng-binding")
 	WebElement projectName;
 
 	@FindBy(xpath = "//input[@type='text']")
@@ -35,8 +33,7 @@ public class Project {
 	@FindBy(css = "div.ng-scope > button.btn.btn-primary")
 	WebElement saveProject;
 
-	public Project(){
-
+	public Project() {
 		this.driver = SeleniumDriverManager.getManager().getDriver();
 		PageFactory.initElements(driver, this);
 	}
@@ -45,40 +42,41 @@ public class Project {
 	 * Get  NewProject Name 
 	 * @return
 	 */
-	public String getProjectDashboardName(){
+	public String getProjectDashboardName() {
 		return projectName.getText();
 	}
 
 	/**
 	 * Set project name in textbox   
-	 * @param strNewProject
+	 * @param strProjectName
 	 */
-	public void setNewProject(String strNewProject){
+	public void setNewProject(String strProjectName) {
 		newProjectName.click();
-		newProjectName.sendKeys(strNewProject);        
+		newProjectName.clear();
+		newProjectName.sendKeys(strProjectName);        
 	}
 
 	/**
 	 * Set IterationLength in IterationLength textbox 
 	 * @param strIterationLength
 	 */
-	public void setIterationLength(String strIterationLength){
+	public void setIterationLength(String strIterationLength) {
 		iterationLength.sendKeys(strIterationLength); 
 	}
 
 	/**
 	 * Set number of done iterations textbox 
-	 * @param strNumberOfDoneIterations
+	 * @param strIterationsToShow
 	 */
-	public void setNumberOfDoneIterationsToShow(String strNumberOfDoneIterations){
-		numberOfDoneIterationsToShow.sendKeys(strNumberOfDoneIterations); 
+	public void setNumberOfDoneIterationsToShow(String strIterationsToShow) {
+		numberOfDoneIterationsToShow.sendKeys(strIterationsToShow); 
 	}
 
 	/**
 	 * Click on Save button
 	 */
-	public void clickSave(){
-		saveProject.click();
+	public void clickSave() {
+		saveProject.click();	
 	}      
 
 	/*   
@@ -87,16 +85,9 @@ public class Project {
 	 * @param strIterationLength
 	 * @return
 	 */
-
-	public UserStory createNewProject(String strNewProject,String strIterationLength){
-
-		//Fill user name 
+	public UserStory createNewProject(String strNewProject,String strIterationLength) {
 		this.setNewProject(strNewProject);
-
-		//Fill password 
 		this.setIterationLength(strIterationLength); 
-
-		//Click Login button
 		this.clickSave();   
 
 		return new UserStory();
@@ -108,18 +99,12 @@ public class Project {
 	 * @param strNumberOfDoneIterations
 	 * @return
 	 */
-	public UserStory updateProject(String strIterationLength,
-			String strNumberOfDoneIterations){
-
-		//Fill password 
+	public Dashboard updateProject(String strNewProject, String strIterationLength,
+			String strNumberOfDoneIterations) {
+		this.setNewProject(strNewProject);
 		this.setIterationLength(strIterationLength); 
-
-		//Fill password 
 		this.setNumberOfDoneIterationsToShow(strNumberOfDoneIterations);
-
-		//Click Login button
 		this.clickSave();  
-
-		return new UserStory();
+		return new Dashboard();
 	}
 }

@@ -15,17 +15,15 @@ import pages.Login;
 public class TestLoginWithPageFactory {
 
 	@BeforeTest
-	public void setup(){
+	public void preConditions(){
 	}
 
 	/* This test go to http://172.20.8.22:3001/#/signin 
 	 * Login to application 
-	 * Verify the user name using Dashboard message
+	 * Verify the project name using User Story label
 	 */
-
 	@Test
-	public void verifyHomePageAppearCorrect(){
-
+	public void verifyHomePageAppearCorrect() {
 		String userEmail = "Carlos.Guevara@fundacion-jala.org";
 		String userPassword = "Carlos.Guevara@fundacion-jala.org";
 		//Create Login Page object

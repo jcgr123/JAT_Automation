@@ -18,44 +18,40 @@ import parameters.DataproviderClass;
  */
 public class TestCreateNewUserStoriesWithExcel {
 
-	AddStory objAddStory = new AddStory();		
-	UserStory objUserStoriesPage = new UserStory();
-	Project objNewProject = new Project();
-	Dashboard objDashboard = new Dashboard();
-
 	@BeforeClass
-
-	public void setup(){
+	public void preConditions() {			
 		String projectName = "1stNewProject";
 		String iterationsNumber = "2";
-		objDashboard.clickNewProject();
-		objNewProject.createNewProject(projectName,iterationsNumber);	
+		Dashboard objDashboard = new Dashboard();
+		Project objProject = objDashboard.clickNewProject();
+		objProject.createNewProject(projectName, iterationsNumber);
+		
 	}
 
 	/*
-	 * This test creates a new user Story  
-	 * Verify the user name using user story name
+	 * This test creates a new user Story with an .xlsx file data 
+	 * Verify the user story is created with the name provided
 	 */
-	@Test(dataProvider="UserStoryData", dataProviderClass=DataproviderClass.class)
-	public void verifyNewUserStoryIsCreatedWithTasksCorrectly(String strNewStory, String strNewType,
-			String strNewPoints, String strStoryState,
-			String strNewOwner, String strNewDescription,
-			String strNewAcceptance){		
+	@Test(dataProvider = "UserStoryData", dataProviderClass = DataproviderClass.class)
+	public void verifyNewUserStoryIsCreatedWithTasksCorrectly(String strNewStory, 
+			String strNewType,String strNewPoints, String strStoryState,
+			String strNewOwner, String strNewDescription, String strNewAcceptance) {		
 
-		objUserStoriesPage.clickNewStory();
+		UserStory objUserStory = new UserStory();
+		AddStory objAddStory = objUserStory.clickNewStoryBtn();
 		objAddStory.createNewStory(strNewStory,  strNewType,
 				strNewPoints, strStoryState,
 				strNewOwner, strNewDescription,
 				strNewAcceptance);
 		//Verify New User Story is created
-		Assert.assertTrue(objUserStoriesPage.getUserStoryName().contains(strNewStory));
+		Assert.assertTrue(objUserStory.getUserStoryName().contains(strNewStory));
 	}
 
 	@AfterClass
-	public void cleanEnvironment(){
-
-		objUserStoriesPage.clickDashboardButton();
-		objDashboard.deleteProject();
-		objDashboard.confirmDelete();
+	public void cleanEnvironment() {
+		UserStory objUserStory = new UserStory();
+		Dashboard objDashboard = objUserStory.clickDashboardBtn();
+		objDashboard.deleteProject()	
+					.confirmDelete();
 	}
 }

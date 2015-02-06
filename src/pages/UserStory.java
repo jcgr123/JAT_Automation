@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import common.SeleniumDriverManager;
 
 /**
- *  * 
+ *  
  * @author carlos guevara
  *
  */
@@ -20,21 +20,28 @@ public class UserStory {
 	WebElement userStoryName;
 
 	@FindBy(id = "newUserStory_link")
-	WebElement buttonAddStory;
+	WebElement btnAddStory;
 
 	@FindBy(xpath = "//strong")
-	WebElement buttonDashboard;
+	WebElement btnDashboard;
+	
+	@FindBy(xpath = "//div[2]/div/section/div[2]")
+	WebElement projectName;
 
-	public UserStory(){ 
+	public UserStory() { 
 		this.driver = SeleniumDriverManager.getManager().getDriver();	
 		PageFactory.initElements(driver, this); 
+	}
+	
+	public String getProjectName() {
+		return projectName.getText();
 	}
 
 	/**
 	 * Get user story name
-	 * @return
+	 * @return 
 	 */
-	public String getUserStoryName(){
+	public String getUserStoryName() {
 		return userStoryName.getText();
 	}
 
@@ -42,15 +49,16 @@ public class UserStory {
 	 * Click on +Add Story button   
 	 * @return
 	 */
-	public AddStory clickNewStory(){   	 
-		buttonAddStory.click();
+	public AddStory clickNewStoryBtn() {   	 
+		btnAddStory.click();
 		return new AddStory();
 	}
 
 	/**
 	 * Click on Dashboard button   
 	 */
-	public void clickDashboardButton(){   	 
-		buttonDashboard.click();
-	}
+	public Dashboard clickDashboardBtn() {   	 
+		btnDashboard.click();
+		return new Dashboard();
+	}	
 }

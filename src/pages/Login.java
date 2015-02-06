@@ -16,16 +16,16 @@ public class Login {
 
 	public WebDriver driver;
 
-	@FindBy(xpath ="//input[@type='text']")
-	WebElement userName;
+	@FindBy(xpath = "//input[@type='text']")
+	WebElement userEmail;
 
-	@FindBy(xpath ="//input[@type='password']")
-	WebElement password;
+	@FindBy(xpath = "//input[@type='password']")
+	WebElement userPassword;
 
-	@FindBy(xpath ="//input[@value='Sign in']")
+	@FindBy(xpath = "//input[@value='Sign in']")
 	WebElement login;
 
-	public Login(){
+	public Login() {
 		this.driver = SeleniumDriverManager.getManager().getDriver();
 		//This initElements method will create all WebElements
 		PageFactory.initElements(driver, this);
@@ -33,52 +33,47 @@ public class Login {
 	}
 
 	/**
-	 * Set user name in textbox
-	 * @param strUserName
+	 * Set user email in textbox
+	 * @param strUserEmail
 	 */
-	public void setUserName(String strUserName){
-		userName.clear();
-		userName.sendKeys(strUserName);        
+	public void setUserEmail(String strUserEmail) {
+		userEmail.clear();
+		userEmail.sendKeys(strUserEmail);        
 	}
 
 	/**
 	 * Set password in password textbox
 	 * @param strPassword
 	 */
-	public void setPassword(String strPassword){
-		password.clear();
-		password.sendKeys(strPassword);
+	public void setUserPassword(String strPassword) {
+		userPassword.clear();
+		userPassword.sendKeys(strPassword);
 	}
 
 	/**
 	 * Click on login button
 	 */
-	public void clickLogin(){ 
+	public void clickLogin() { 
 		login.click();
 	}
 
 	/**
 	 * Quit program
 	 */
-	public void quit(){
+	public void quit() {
 		driver.quit();
 	}
 
 	/**
-	 * method that allows the user to log into JAT
-	 * @param strUserName
+	 * Method that allows the user to log into JAT
+	 * @param strUserEmail
 	 * @param strPassword
 	 * @return
 	 */
-	public Dashboard loginToJAT(String strUserName,String strPassword){
-
-		//Fill user name
-		this.setUserName(strUserName);
-		//Fill password
-		this.setPassword(strPassword); 
-		//Click Login button
+	public Dashboard loginToJAT(String strUserEmail,String strPassword) {
+		this.setUserEmail(strUserEmail);
+		this.setUserPassword(strPassword); 
 		this.clickLogin();
-
 		return new Dashboard();
 	}
 }

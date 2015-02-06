@@ -1,6 +1,5 @@
 package tests;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -19,47 +18,41 @@ import parameters.DataproviderClass;
  */
 public class TestCreateUserStoriesWithDataprovider {
 
-	public WebDriver driver;
-
-	AddStory objAddStory = new AddStory();		
-	UserStory objUserStoriesPage = new UserStory();
-	Project objNewProject = new Project();
-	Dashboard objDashboard = new Dashboard();
 
 	@BeforeClass
-
-	public void setup(){
+	public void preConditions() {
 		String projectName = "1stNewProject";
 		String iterationsNumber = "2";
-		objDashboard.clickNewProject();  
-		objNewProject.createNewProject(projectName,iterationsNumber);			
+		Dashboard objDashboard = new Dashboard();
+		Project objProject = objDashboard.clickNewProject();
+		objProject.createNewProject(projectName, iterationsNumber);
 	}
 
 	/*
-	 * This test creates a new user story  
-	 * Verify the user name using user story name
+	 * This test creates a new user story with a matrix of data 
+	 * Verify the user story is created with the name provided
 	 */
-	@Test(dataProvider="SearchProvider",dataProviderClass=DataproviderClass.class)
+	@Test(dataProvider = "SearchProvider", dataProviderClass = DataproviderClass.class)
 	public void testMethod(String strNewStory, String strNewType,
 			String strNewPoints, String strStoryState,
 			String strNewOwner, String strNewDescription,
-			String strNewAcceptance) throws InterruptedException{
+			String strNewAcceptance) throws InterruptedException {
 
-		objUserStoriesPage.clickNewStory();
+		UserStory objUserStory = new UserStory();
+		AddStory objAddStory = objUserStory.clickNewStoryBtn();
 		objAddStory.createNewStory(strNewStory,  strNewType,
 				strNewPoints, strStoryState,
 				strNewOwner, strNewDescription,
 				strNewAcceptance);
 		//Verify New User Story is created
-		Assert.assertTrue(objUserStoriesPage.getUserStoryName().contains(strNewStory));		
+		Assert.assertTrue(objUserStory.getUserStoryName().contains(strNewStory));		
 	}
 
 	@AfterClass
 	public void cleanEnvironment(){
-
-		//Click select first project to insert user stories
-		objUserStoriesPage.clickDashboardButton();
-		objDashboard.deleteProject();
-		objDashboard.confirmDelete();
+		UserStory objUserStory = new UserStory();
+		Dashboard objDashboard = objUserStory.clickDashboardBtn();
+		objDashboard.deleteProject()	
+					.confirmDelete();
 	}
 }

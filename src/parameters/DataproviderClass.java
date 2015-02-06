@@ -16,13 +16,12 @@ public class DataproviderClass {
 
 
 	/**
-	 * Main function is calling readExcel function to read data from excel file
-	 * @param strings
-	 * @throws IOException
+	 *  Function is  reading data from this matrix
+	 * @return 
 	 */
-
-	@DataProvider(name="SearchProvider")
-	public static Object[][] getDataFromDataprovider(){
+	 
+	@DataProvider(name = "SearchProvider")
+	public static Object[][] getDataFromDataprovider() {
 		return new Object[][] {
 
 				{"Story1","Bug","1","Unstarted","Juan Carlos Guevara Ramirez",
@@ -33,14 +32,29 @@ public class DataproviderClass {
 							"Description 3","Optimized high"}};   
 	}
 
-	@DataProvider(name="UserStoryData")
-	public static Object[][] getDataFromXlsx() throws IOException{
+	/**
+	 * Function is calling readExcel function to read data from excel file
+	 * @return
+	 * @throws IOException
+	 */
+	@DataProvider(name = "UserStoryData")
+	public static Object[][] getDataFromXlsx() throws IOException {
 		//Create a object of ReadExcelFile class
 		ReadExcelFile objExcelFile = new ReadExcelFile();
 		//Prepare the path of excel file
 		String filePath = System.getProperty("user.dir")+"\\src\\tests\\resources";
 		//Call read file method of the class to read data
-		Object[][] data =objExcelFile.readExcel(filePath,"UserStoryData.xlsx","Data");
+		Object[][] data = objExcelFile.readExcel(filePath,"UserStoryData.xlsx","Data");
 		return data;
+	}
+	
+	/**
+	 * function that returns name of the project and iteration length
+	 * @return
+	 */
+	@DataProvider(name = "createProject")
+	public static Object[][] createData() {
+		Object[][] objUser={{"1stNewProject","2"}};
+		return(objUser);
 	}
 }

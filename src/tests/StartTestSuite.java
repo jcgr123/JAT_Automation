@@ -13,21 +13,18 @@ import pages.Logout;
  */
 
 public class StartTestSuite {
-
 	Login objlogin = new Login();
 	Logout objLogout = new Logout();
 
 	@BeforeSuite
 	public void init() {
-
 		String userEmail = "Carlos.Guevara@fundacion-jala.org";
 		String userPassword = "Carlos.Guevara@fundacion-jala.org";
 		objlogin.loginToJAT(userEmail, userPassword);
 	}
 	@AfterSuite
-	public void quit(){
-
-		objLogout.logout();
+	public void quit() {
+		objLogout.logoutOfJAT();
 		objlogin.quit();
 	}
 }

@@ -1,7 +1,8 @@
 package tests;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import pages.Dashboard;
@@ -9,48 +10,44 @@ import pages.Project;
 import pages.UserStory;
 
 /**
- *  * 
+ *  
  * @author carlos guevara
  *
  */
-
 public class TestUpdateProject {
 
-	Project objNewProject;
-	Dashboard objDashboard;
-	UserStory objUserStoriesPage;
-
-	@BeforeTest
-	public void setUp(){
-		objNewProject = new Project();
-		objDashboard = new Dashboard();
-		objUserStoriesPage = new UserStory();
+	@BeforeClass
+	public void preConditions() {
+		String projectName = "1stNewProject";
+		String iterationsNumber = "2";
+		Dashboard objDashboard = new Dashboard();
+		Project objProject = objDashboard.clickNewProject();
+		UserStory objUserStory = objProject.createNewProject(projectName, iterationsNumber);
+		objDashboard = objUserStory.clickDashboardBtn();
 	}
 
 	/*
 	 * This test creates a new project  and updates it
-	 * Verify the user name using Dashboard message
+	 * Verify the project updated the name using User Story label
 	 */
 	@Test
-
-	public void verifyNewProjectIsUpdatedCorrectly(){    	    	     
-
-		String projectName = "1stNewProject";
-		String iterationsNumber = "2";
+	public void verifyNewProjectIsUpdatedCorrectly() {    	    	     
+		String projectName = "1stNewProjectUpdated";
+		String iterationsNumber = "3";
 		String numberOfIterationsToShow = "2";
-		objDashboard.clickNewProject();
-		// create title for the project   
-		objNewProject.createNewProject(projectName,iterationsNumber);
-		//Click Dashboard button
-		objUserStoriesPage.clickDashboardButton();
-		//Click +NewProject button in Dashboard class   	
-		objDashboard.clickUpdateProject();
-		objNewProject.updateProject("3",numberOfIterationsToShow); 
-		objDashboard.clickSelectFirstProject();
+		Dashboard objDashboard = new Dashboard();
+		Project objProject = objDashboard.clickUpdateProject();
+		objProject.updateProject(projectName,iterationsNumber,numberOfIterationsToShow);
+		UserStory objUserStory = objDashboard.clickSelectFirstProject();
 		//Verify New Project is created
-		Assert.assertTrue(objDashboard.getProjectName().contains(projectName));
-		objUserStoriesPage.clickDashboardButton();
-		objDashboard.deleteProject();
-		objDashboard.confirmDelete();
+		Assert.assertTrue(objUserStory.getProjectName().contains(projectName));
+	}
+
+	@AfterClass
+	public void cleanEnvironment() {
+		UserStory objUserStory = new UserStory();
+		Dashboard objDashboard = objUserStory.clickDashboardBtn();
+		objDashboard.deleteProject()	
+					.confirmDelete();
 	}
 }
