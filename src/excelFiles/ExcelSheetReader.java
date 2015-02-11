@@ -12,31 +12,23 @@ import jxl.Workbook;
 import jxl.read.biff.BiffException;
 
 public class ExcelSheetReader {
-	
-	String path;
-	String sheetName;
-	public ExcelSheetReader(String filePath, String excelSheetName){
-		path = filePath;
-		sheetName = excelSheetName;
-	}
-	
-	public List<Map<String, String>> readExcel() throws IOException {
+
+	public List<Map<String, String>> readExcel(String filePath, String sheetName) throws IOException {
 		List<Map<String, String>> listOfMaps = new LinkedList<>();	
 		try {
 			Workbook workbook;
-			workbook = Workbook.getWorkbook(new File(path));
+			workbook = Workbook.getWorkbook(new File(filePath));
 			Sheet sheet = workbook.getSheet(sheetName); 
 
-			for (int row = 0; row < sheet.getRows(); row++) {
-				HashMap<String, String> map = new HashMap<>();
+			for (int row = 1; row < sheet.getRows(); row++) {
+				Map<String, String> map = new HashMap<>();
 				for (int col = 0; col < sheet.getColumns(); col++) {
 					String key = sheet.getCell(col,0).getContents();
 					String value = 	sheet.getCell(col,row).getContents();		
-					map.put(key, value);
+					map.put(key, value);				
 				}
 				listOfMaps.add(map);	
 			}
-
 		} catch (BiffException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

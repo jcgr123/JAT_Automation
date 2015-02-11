@@ -19,20 +19,28 @@
         <methods>
           <include name="preConditions"/>
           <include name="cleanEnvironment"/>
+          <include name="verifyNewProjectIsUpdatedCorrectly"/>
         </methods>
       </class> <!-- tests.TestUpdateProject -->
       <class name="tests.TestCreateNewUserStoriesWithExcel">
         <methods>
           <include name="preConditions"/>
           <include name="cleanEnvironment"/>
-          <include name="verifyNewUserStoryIsCreatedWithTasksCorrectly"/>
         </methods>
       </class> <!-- tests.TestCreateNewUserStoriesWithExcel -->
       <class name="tests.TestCreateNewProject">
         <methods>
+          <include name="verifyNewProjectIsCreatedCorrectly"/>
           <include name="cleanEnvironment"/>
         </methods>
       </class> <!-- tests.TestCreateNewProject -->
+      <class name="tests.TestCreateOneProjectWithThreeUserStoriesWithJXL">
+        <methods>
+          <include name="verifyNewProjectIsCreatedCorrectly"/>
+          <include name="preConditions"/>
+          <include name="cleanEnvironment"/>
+        </methods>
+      </class> <!-- tests.TestCreateOneProjectWithThreeUserStoriesWithJXL -->
     </classes>
   </test> <!-- Project(failed) -->
 </suite> <!-- Failed suite [JAT_Test_Suite] -->

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="8" passed="8">
+<testng-results skipped="0" failed="0" total="9" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="JAT_Test_Suite" duration-ms="53558" started-at="2015-02-10T23:22:48Z" finished-at="2015-02-10T23:23:41Z">
+  <suite name="JAT_Test_Suite" duration-ms="70842" started-at="2015-02-11T14:13:12Z" finished-at="2015-02-11T14:14:23Z">
     <groups>
     </groups>
-    <test name="Project" duration-ms="53558" started-at="2015-02-10T23:22:48Z" finished-at="2015-02-10T23:23:41Z">
+    <test name="Project" duration-ms="70842" started-at="2015-02-11T14:13:12Z" finished-at="2015-02-11T14:14:23Z">
       <class name="tests.TestCreateUserStoriesWithDataprovider">
-        <test-method status="PASS" signature="preConditions()[pri:0, instance:tests.TestCreateUserStoriesWithDataprovider@25be7b63]" name="preConditions" is-config="true" duration-ms="1969" started-at="2015-02-10T19:23:06Z" finished-at="2015-02-10T19:23:08Z">
+        <test-method status="PASS" signature="preConditions()[pri:0, instance:tests.TestCreateUserStoriesWithDataprovider@4a8355dd]" name="preConditions" is-config="true" duration-ms="1828" started-at="2015-02-11T10:13:29Z" finished-at="2015-02-11T10:13:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preConditions -->
-        <test-method status="PASS" signature="testMethod(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.TestCreateUserStoriesWithDataprovider@25be7b63]" name="testMethod" duration-ms="6218" started-at="2015-02-10T19:23:08Z" data-provider="SearchProvider" finished-at="2015-02-10T19:23:14Z">
+        <test-method status="PASS" signature="testMethod(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.TestCreateUserStoriesWithDataprovider@4a8355dd]" name="testMethod" duration-ms="5894" started-at="2015-02-11T10:13:31Z" data-provider="SearchProvider" finished-at="2015-02-11T10:13:37Z">
           <params>
             <param index="0">
               <value>
@@ -52,7 +52,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMethod -->
-        <test-method status="PASS" signature="testMethod(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.TestCreateUserStoriesWithDataprovider@25be7b63]" name="testMethod" duration-ms="3656" started-at="2015-02-10T19:23:14Z" data-provider="SearchProvider" finished-at="2015-02-10T19:23:17Z">
+        <test-method status="PASS" signature="testMethod(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.TestCreateUserStoriesWithDataprovider@4a8355dd]" name="testMethod" duration-ms="3660" started-at="2015-02-11T10:13:37Z" data-provider="SearchProvider" finished-at="2015-02-11T10:13:41Z">
           <params>
             <param index="0">
               <value>
@@ -93,7 +93,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMethod -->
-        <test-method status="PASS" signature="testMethod(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.TestCreateUserStoriesWithDataprovider@25be7b63]" name="testMethod" duration-ms="3928" started-at="2015-02-10T19:23:17Z" data-provider="SearchProvider" finished-at="2015-02-10T19:23:21Z">
+        <test-method status="PASS" signature="testMethod(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.TestCreateUserStoriesWithDataprovider@4a8355dd]" name="testMethod" duration-ms="3675" started-at="2015-02-11T10:13:41Z" data-provider="SearchProvider" finished-at="2015-02-11T10:13:44Z">
           <params>
             <param index="0">
               <value>
@@ -134,17 +134,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMethod -->
-        <test-method status="PASS" signature="cleanEnvironment()[pri:0, instance:tests.TestCreateUserStoriesWithDataprovider@25be7b63]" name="cleanEnvironment" is-config="true" duration-ms="1922" started-at="2015-02-10T19:23:21Z" finished-at="2015-02-10T19:23:23Z">
+        <test-method status="PASS" signature="cleanEnvironment()[pri:0, instance:tests.TestCreateUserStoriesWithDataprovider@4a8355dd]" name="cleanEnvironment" is-config="true" duration-ms="1831" started-at="2015-02-11T10:13:44Z" finished-at="2015-02-11T10:13:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanEnvironment -->
       </class> <!-- tests.TestCreateUserStoriesWithDataprovider -->
-      <class name="tests.TestCreateNewUserStoriesWithExcel">
-        <test-method status="PASS" signature="preConditions()[pri:0, instance:tests.TestCreateNewUserStoriesWithExcel@4a8355dd]" name="preConditions" is-config="true" duration-ms="2500" started-at="2015-02-10T19:23:23Z" finished-at="2015-02-10T19:23:26Z">
+      <class name="tests.TestCreateOneProjectWithThreeUserStoriesWithJXL">
+        <test-method status="PASS" signature="preConditions()[pri:0, instance:tests.TestCreateOneProjectWithThreeUserStoriesWithJXL@66982506]" name="preConditions" is-config="true" duration-ms="2812" started-at="2015-02-11T10:14:04Z" finished-at="2015-02-11T10:14:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preConditions -->
-        <test-method status="PASS" signature="verifyNewUserStoryIsCreatedWithTasksCorrectly(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.TestCreateNewUserStoriesWithExcel@4a8355dd]" name="verifyNewUserStoryIsCreatedWithTasksCorrectly" duration-ms="3578" started-at="2015-02-10T19:23:28Z" data-provider="UserStoryData" finished-at="2015-02-10T19:23:32Z">
+        <test-method status="PASS" signature="verifyNewProjectIsCreatedCorrectly()[pri:0, instance:tests.TestCreateOneProjectWithThreeUserStoriesWithJXL@66982506]" name="verifyNewProjectIsCreatedCorrectly" duration-ms="13780" started-at="2015-02-11T10:14:07Z" finished-at="2015-02-11T10:14:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNewProjectIsCreatedCorrectly -->
+        <test-method status="PASS" signature="cleanEnvironment()[pri:0, instance:tests.TestCreateOneProjectWithThreeUserStoriesWithJXL@66982506]" name="cleanEnvironment" is-config="true" duration-ms="1785" started-at="2015-02-11T10:14:21Z" finished-at="2015-02-11T10:14:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanEnvironment -->
+      </class> <!-- tests.TestCreateOneProjectWithThreeUserStoriesWithJXL -->
+      <class name="tests.TestCreateNewUserStoriesWithExcel">
+        <test-method status="PASS" signature="preConditions()[pri:0, instance:tests.TestCreateNewUserStoriesWithExcel@536f2a7e]" name="preConditions" is-config="true" duration-ms="2766" started-at="2015-02-11T10:13:46Z" finished-at="2015-02-11T10:13:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preConditions -->
+        <test-method status="PASS" signature="verifyNewUserStoryIsCreatedWithTasksCorrectly(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.TestCreateNewUserStoriesWithExcel@536f2a7e]" name="verifyNewUserStoryIsCreatedWithTasksCorrectly" duration-ms="4233" started-at="2015-02-11T10:13:51Z" data-provider="UserStoryData" finished-at="2015-02-11T10:13:55Z">
           <params>
             <param index="0">
               <value>
@@ -185,7 +199,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyNewUserStoryIsCreatedWithTasksCorrectly -->
-        <test-method status="PASS" signature="verifyNewUserStoryIsCreatedWithTasksCorrectly(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.TestCreateNewUserStoriesWithExcel@4a8355dd]" name="verifyNewUserStoryIsCreatedWithTasksCorrectly" duration-ms="4079" started-at="2015-02-10T19:23:32Z" data-provider="UserStoryData" finished-at="2015-02-10T19:23:36Z">
+        <test-method status="PASS" signature="verifyNewUserStoryIsCreatedWithTasksCorrectly(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.TestCreateNewUserStoriesWithExcel@536f2a7e]" name="verifyNewUserStoryIsCreatedWithTasksCorrectly" duration-ms="4173" started-at="2015-02-11T10:13:55Z" data-provider="UserStoryData" finished-at="2015-02-11T10:13:59Z">
           <params>
             <param index="0">
               <value>
@@ -226,7 +240,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyNewUserStoryIsCreatedWithTasksCorrectly -->
-        <test-method status="PASS" signature="verifyNewUserStoryIsCreatedWithTasksCorrectly(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.TestCreateNewUserStoriesWithExcel@4a8355dd]" name="verifyNewUserStoryIsCreatedWithTasksCorrectly" duration-ms="3502" started-at="2015-02-10T19:23:36Z" data-provider="UserStoryData" finished-at="2015-02-10T19:23:39Z">
+        <test-method status="PASS" signature="verifyNewUserStoryIsCreatedWithTasksCorrectly(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.TestCreateNewUserStoriesWithExcel@536f2a7e]" name="verifyNewUserStoryIsCreatedWithTasksCorrectly" duration-ms="3551" started-at="2015-02-11T10:13:59Z" data-provider="UserStoryData" finished-at="2015-02-11T10:14:03Z">
           <params>
             <param index="0">
               <value>
@@ -267,41 +281,41 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyNewUserStoryIsCreatedWithTasksCorrectly -->
-        <test-method status="PASS" signature="cleanEnvironment()[pri:0, instance:tests.TestCreateNewUserStoriesWithExcel@4a8355dd]" name="cleanEnvironment" is-config="true" duration-ms="2169" started-at="2015-02-10T19:23:39Z" finished-at="2015-02-10T19:23:41Z">
+        <test-method status="PASS" signature="cleanEnvironment()[pri:0, instance:tests.TestCreateNewUserStoriesWithExcel@536f2a7e]" name="cleanEnvironment" is-config="true" duration-ms="1905" started-at="2015-02-11T10:14:03Z" finished-at="2015-02-11T10:14:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanEnvironment -->
       </class> <!-- tests.TestCreateNewUserStoriesWithExcel -->
       <class name="tests.TestUpdateProject">
-        <test-method status="PASS" signature="preConditions()[pri:0, instance:tests.TestUpdateProject@4c163e3]" name="preConditions" is-config="true" duration-ms="5033" started-at="2015-02-10T19:22:55Z" finished-at="2015-02-10T19:23:00Z">
+        <test-method status="PASS" signature="preConditions()[pri:0, instance:tests.TestUpdateProject@312aa7c]" name="preConditions" is-config="true" duration-ms="4516" started-at="2015-02-11T10:13:19Z" finished-at="2015-02-11T10:13:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preConditions -->
-        <test-method status="PASS" signature="verifyNewProjectIsUpdatedCorrectly()[pri:0, instance:tests.TestUpdateProject@4c163e3]" name="verifyNewProjectIsUpdatedCorrectly" duration-ms="4125" started-at="2015-02-10T19:23:00Z" finished-at="2015-02-10T19:23:04Z">
+        <test-method status="PASS" signature="verifyNewProjectIsUpdatedCorrectly()[pri:0, instance:tests.TestUpdateProject@312aa7c]" name="verifyNewProjectIsUpdatedCorrectly" duration-ms="4114" started-at="2015-02-11T10:13:24Z" finished-at="2015-02-11T10:13:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyNewProjectIsUpdatedCorrectly -->
-        <test-method status="PASS" signature="cleanEnvironment()[pri:0, instance:tests.TestUpdateProject@4c163e3]" name="cleanEnvironment" is-config="true" duration-ms="1688" started-at="2015-02-10T19:23:04Z" finished-at="2015-02-10T19:23:06Z">
+        <test-method status="PASS" signature="cleanEnvironment()[pri:0, instance:tests.TestUpdateProject@312aa7c]" name="cleanEnvironment" is-config="true" duration-ms="1568" started-at="2015-02-11T10:13:28Z" finished-at="2015-02-11T10:13:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanEnvironment -->
       </class> <!-- tests.TestUpdateProject -->
       <class name="tests.TestCreateNewProject">
-        <test-method status="PASS" signature="verifyNewProjectIsCreatedCorrectly()[pri:0, instance:tests.TestCreateNewProject@4d0d9fe7]" name="verifyNewProjectIsCreatedCorrectly" duration-ms="4703" started-at="2015-02-10T19:22:48Z" finished-at="2015-02-10T19:22:53Z">
+        <test-method status="PASS" signature="verifyNewProjectIsCreatedCorrectly()[pri:0, instance:tests.TestCreateNewProject@72bc6553]" name="verifyNewProjectIsCreatedCorrectly" duration-ms="4833" started-at="2015-02-11T10:13:12Z" finished-at="2015-02-11T10:13:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyNewProjectIsCreatedCorrectly -->
-        <test-method status="PASS" signature="cleanEnvironment()[pri:0, instance:tests.TestCreateNewProject@4d0d9fe7]" name="cleanEnvironment" is-config="true" duration-ms="2079" started-at="2015-02-10T19:22:53Z" finished-at="2015-02-10T19:22:55Z">
+        <test-method status="PASS" signature="cleanEnvironment()[pri:0, instance:tests.TestCreateNewProject@72bc6553]" name="cleanEnvironment" is-config="true" duration-ms="2307" started-at="2015-02-11T10:13:17Z" finished-at="2015-02-11T10:13:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanEnvironment -->
       </class> <!-- tests.TestCreateNewProject -->
       <class name="tests.StartTestSuite">
-        <test-method status="PASS" signature="init()[pri:0, instance:tests.StartTestSuite@433defed]" name="init" is-config="true" duration-ms="1019" started-at="2015-02-10T19:22:47Z" finished-at="2015-02-10T19:22:48Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:tests.StartTestSuite@533bda92]" name="init" is-config="true" duration-ms="993" started-at="2015-02-11T10:13:11Z" finished-at="2015-02-11T10:13:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:tests.StartTestSuite@433defed]" name="quit" is-config="true" duration-ms="1343" started-at="2015-02-10T19:23:42Z" finished-at="2015-02-10T19:23:43Z">
+        <test-method status="PASS" signature="quit()[pri:0, instance:tests.StartTestSuite@533bda92]" name="quit" is-config="true" duration-ms="1156" started-at="2015-02-11T10:14:23Z" finished-at="2015-02-11T10:14:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->

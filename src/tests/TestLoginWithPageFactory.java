@@ -2,16 +2,19 @@ package tests;
 
 import org.testng.Assert; 
 import org.testng.annotations.BeforeTest; 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test; 
 
 import pages.Dashboard;
 import pages.Login;
+import testNGReport.realTimeReport.RealTimeReport;
 
 /**
  *  * 
  * @author carlos guevara
  *
  */
+@Listeners(RealTimeReport.class)
 public class TestLoginWithPageFactory {
 
 	@BeforeTest

@@ -3,17 +3,20 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import pages.Dashboard;
 import pages.Project;
 import pages.UserStory;
+import testNGReport.realTimeReport.RealTimeReport;
 
 /**
  *  
  * @author carlos guevara
  *
  */
+@Listeners(RealTimeReport.class)
 public class TestUpdateProject {
 
 	@BeforeClass

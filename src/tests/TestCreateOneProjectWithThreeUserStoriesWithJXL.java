@@ -1,14 +1,21 @@
 package tests;
 
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+
+
+
+//import org.apache.poi.hslf.model.TextPainter.Key;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+//import org.testng.Assert;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+
+
 
 import pages.AddStory;
 import pages.Dashboard;
@@ -20,49 +27,40 @@ public class TestCreateOneProjectWithThreeUserStoriesWithJXL {
 
 	WebDriver driver;
 
-	@BeforeTest
+	@BeforeClass
 	public void preConditions() throws Exception {	
-
-		ExcelSheetReader xlsFile = new ExcelSheetReader(System.getProperty("user.dir") +
-				"src\tests\resources\\Data.xls", "ProjectData");
-		List<Map<String, String>> listOfMaps = new LinkedList<>();			
+		ExcelSheetReader xlsFile = new ExcelSheetReader();	
+		List<Map<String, String>> listOfMaps = xlsFile.readExcel("C:\\Users\\Carlos Guevara\\workspace\\JAT\\src\\tests\\resources\\Data.xls", "ProjectData");
 		Dashboard objDashboard = new Dashboard();	
 		Project objProject = objDashboard.clickNewProject();   
-		UserStory objUserStory = objProject.createNewProject(listOfMaps[0].get("Name"),
-				listOfMaps[1].get("IterationNumber"), listOfMaps[2].get("NumberOfDoneIterationsToShow"));
-
+		objProject.createNewProject(listOfMaps.get(0).get("Name"),
+				listOfMaps.get(1).get("IterationNumber"), 
+				listOfMaps.get(2).get("NumberOfDoneIterationsToShow"));
 	}
 	/*
 	 * This test creates a new project  
 	 * Verify the project name using User Story label
 	 */
 	@Test
-	public void verifyNewProjectIsCreatedCorrectly() {   
-		//		
-		//		HashMap<String, HashMap> selects = new HashMap<String, HashMap>();
-		//		for (String key : selects.keySet())
-		//		{
-		//		    HashMap<innerKey, String> boxHolder = selects.get(key);
-		//		    ComboBox cb = new ComboBox();
-		//		}
-		ExcelSheetReader xlsFile = new ExcelSheetReader(System.getProperty("user.dir") +
-				"src\tests\resources\\Data.xls", "StoryData");
-		List<Map<String, String>> selects =  new LinkedList<>();
+	public void verifyNewProjectIsCreatedCorrectly() throws Exception {   
 
-		for(String key : selects.keySet()) {
 
-			List<Key, String> boxHolder= selects.get("Name");
+		ExcelSheetReader xlsFile = new ExcelSheetReader();	
+		List<Map<String, String>> listOfMaps = xlsFile.readExcel("C:\\Users\\Carlos Guevara\\workspace\\JAT\\src\\tests\\resources\\Data.xls", "StoryData");
+		UserStory objUserStory = new UserStory();
 
-			UserStory objUserStory = new UserStory();
+		for(Map<String, String> list : listOfMaps){
 			AddStory objAddStory = objUserStory.clickNewStoryBtn();
-			//			objAddStory.createNewStory(strNewStory,  strNewType,
-			//					strNewPoints, strStoryState,
-			//					strNewOwner, strNewDescription,
-			//					strNewAcceptance);
-		}
-
-		//Verify New User Story is created
-		//Assert.assertTrue(objUserStory.getUserStoryName().contains(strNewStory));	
+			objAddStory.createNewStory(list.get("Title"),
+					list.get("Type"),
+					list.get("Points"), 
+					list.get("State"),
+					list.get("Owner"),
+					list.get("Description"),
+					list.get("Acceptance Criteria"));
+			//Verify New User Story is created
+			Assert.assertTrue(objUserStory.getUserStoryName().contains(list.get("Title")));
+		}	
 	}
 	/**
 	 * This function will take screenshot
