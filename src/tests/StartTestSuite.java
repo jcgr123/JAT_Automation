@@ -11,7 +11,6 @@ import pages.Logout;
  * @author carlos guevara
  *
  */
-
 public class StartTestSuite {
 	Login objlogin = new Login();
 	Logout objLogout = new Logout();

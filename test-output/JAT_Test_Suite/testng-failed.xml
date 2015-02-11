@@ -19,7 +19,6 @@
         <methods>
           <include name="preConditions"/>
           <include name="cleanEnvironment"/>
-          <include name="verifyNewProjectIsUpdatedCorrectly"/>
         </methods>
       </class> <!-- tests.TestUpdateProject -->
       <class name="tests.TestCreateNewUserStoriesWithExcel">
@@ -36,7 +35,6 @@
       </class> <!-- tests.TestCreateNewProject -->
       <class name="tests.TestCreateOneProjectWithThreeUserStoriesWithJXL">
         <methods>
-          <include name="verifyNewProjectIsCreatedCorrectly"/>
           <include name="preConditions"/>
           <include name="cleanEnvironment"/>
         </methods>
