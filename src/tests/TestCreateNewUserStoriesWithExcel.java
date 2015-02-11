@@ -22,10 +22,11 @@ public class TestCreateNewUserStoriesWithExcel {
 	public void preConditions() {			
 		String projectName = "1stNewProject";
 		String iterationsNumber = "2";
+		String doneIterationsToShow = "2";
 		Dashboard objDashboard = new Dashboard();
 		Project objProject = objDashboard.clickNewProject();
-		objProject.createNewProject(projectName, iterationsNumber);
-		
+		objProject.createNewProject(projectName, iterationsNumber, doneIterationsToShow);
+
 	}
 
 	/*
@@ -44,14 +45,13 @@ public class TestCreateNewUserStoriesWithExcel {
 				strNewOwner, strNewDescription,
 				strNewAcceptance);
 		//Verify New User Story is created
-		Assert.assertTrue(objUserStory.getUserStoryName().contains(strNewStory));
+		Assert.assertTrue(objUserStory.getUserStoryName().contains(strNewStory));	
 	}
-
 	@AfterClass
 	public void cleanEnvironment() {
 		UserStory objUserStory = new UserStory();
 		Dashboard objDashboard = objUserStory.clickDashboardBtn();
 		objDashboard.deleteProject()	
-					.confirmDelete();
+		.confirmDelete();
 	}
 }

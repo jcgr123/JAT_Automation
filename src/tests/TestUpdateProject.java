@@ -20,9 +20,11 @@ public class TestUpdateProject {
 	public void preConditions() {
 		String projectName = "1stNewProject";
 		String iterationsNumber = "2";
+		String doneIterationsToShow = "2";
 		Dashboard objDashboard = new Dashboard();
 		Project objProject = objDashboard.clickNewProject();
-		UserStory objUserStory = objProject.createNewProject(projectName, iterationsNumber);
+		UserStory objUserStory = objProject.createNewProject(projectName, iterationsNumber,
+				doneIterationsToShow);
 		objDashboard = objUserStory.clickDashboardBtn();
 	}
 
@@ -34,10 +36,10 @@ public class TestUpdateProject {
 	public void verifyNewProjectIsUpdatedCorrectly() {    	    	     
 		String projectName = "1stNewProjectUpdated";
 		String iterationsNumber = "3";
-		String numberOfIterationsToShow = "2";
+		String doneIterationsToShow = "3";
 		Dashboard objDashboard = new Dashboard();
 		Project objProject = objDashboard.clickUpdateProject();
-		objProject.updateProject(projectName,iterationsNumber,numberOfIterationsToShow);
+		objProject.updateProject(projectName,iterationsNumber,doneIterationsToShow);
 		UserStory objUserStory = objDashboard.clickSelectFirstProject();
 		//Verify New Project is created
 		Assert.assertTrue(objUserStory.getProjectName().contains(projectName));

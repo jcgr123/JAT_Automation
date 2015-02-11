@@ -14,7 +14,7 @@ import common.SeleniumDriverManager;
  */
 public class AddStory {
 
-	public WebDriver driver;
+	WebDriver driver;
 
 	@FindBy(id = "us-title")
 	WebElement newUserStoryName;
@@ -78,9 +78,11 @@ public class AddStory {
 	 * Set UserStory State in Checkbox 
 	 * @param userStoryState displays user story state
 	 */
-	public void setNewStoryState(String userStoryState) {
+	public UserStory setNewStoryState(String userStoryState) {
 		newUserStoryName.click();
-		newUserStoryState.sendKeys(userStoryState);        
+		//newUserStoryState.click();
+		newUserStoryState.sendKeys(userStoryState);
+		return new UserStory();
 	}
 
 	/**
@@ -110,8 +112,9 @@ public class AddStory {
 	/**
 	 * Click on Save button
 	 */
-	public void clickSaveUserStory() {
+	public UserStory clickSaveUserStory() {
 		saveUserStory.click();
+		return new UserStory();
 	}
 
 	public UserStory createNewStory(String strNewStory, String strNewType,

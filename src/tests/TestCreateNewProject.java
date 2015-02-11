@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 import pages.Dashboard;
 import pages.Project;
 import pages.UserStory;
-import parameters.DataproviderClass;
 
 /**
  *  * 
@@ -20,11 +19,15 @@ public class TestCreateNewProject {
 	 * This test creates a new project  
 	 * Verify the project name using User Story label
 	 */
-	@Test(dataProvider = "createProject", dataProviderClass = DataproviderClass.class)
-	public void verifyNewProjectIsCreatedCorrectly(String projectName, String iterationsNumber) {  
+	@Test
+	public void verifyNewProjectIsCreatedCorrectly() {  
+		String projectName = "1stNewProject";
+		String iterationsNumber = "2";
+		String doneIterationsToShow = "2";
 		Dashboard objDashboard = new Dashboard();
 		Project objProject = objDashboard.clickNewProject();
-	    UserStory objUserStory = objProject.createNewProject(projectName, iterationsNumber);
+	    UserStory objUserStory = objProject.createNewProject(projectName, iterationsNumber,
+	    		doneIterationsToShow);
 		Assert.assertEquals(objUserStory.getProjectName(), projectName);		
 	}
 	

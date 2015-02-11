@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="tests.TestCreateUserStoriesWithDataprovider">
+      <class name="tests.TestHappyPath">
         <methods>
-          <include name="testMethod"/>
+          <include name="verifyUserStoryCompletesHappyPathCorrectly"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- tests.TestCreateUserStoriesWithDataprovider -->
+      </class> <!-- tests.TestHappyPath -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

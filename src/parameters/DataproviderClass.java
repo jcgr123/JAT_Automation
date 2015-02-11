@@ -47,14 +47,4 @@ public class DataproviderClass {
 		Object[][] data = objExcelFile.readExcel(filePath,"UserStoryData.xlsx","Data");
 		return data;
 	}
-	
-	/**
-	 * function that returns name of the project and iteration length
-	 * @return
-	 */
-	@DataProvider(name = "createProject")
-	public static Object[][] createData() {
-		Object[][] objUser={{"1stNewProject","2"}};
-		return(objUser);
-	}
 }

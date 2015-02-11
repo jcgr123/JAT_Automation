@@ -23,9 +23,10 @@ public class TestCreateUserStoriesWithDataprovider {
 	public void preConditions() {
 		String projectName = "1stNewProject";
 		String iterationsNumber = "2";
+		String doneIterationsToShow = "2";
 		Dashboard objDashboard = new Dashboard();
 		Project objProject = objDashboard.clickNewProject();
-		objProject.createNewProject(projectName, iterationsNumber);
+		objProject.createNewProject(projectName, iterationsNumber, doneIterationsToShow);
 	}
 
 	/*

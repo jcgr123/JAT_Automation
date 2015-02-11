@@ -27,6 +27,9 @@ public class UserStory {
 	
 	@FindBy(xpath = "//div[2]/div/section/div[2]")
 	WebElement projectName;
+	
+	@FindBy(xpath = "//div[4]/div/div/div[2]/div[2]/div/div/div/div/div/span")
+	WebElement dropDownUserStory;
 
 	public UserStory() { 
 		this.driver = SeleniumDriverManager.getManager().getDriver();	
@@ -60,5 +63,9 @@ public class UserStory {
 	public Dashboard clickDashboardBtn() {   	 
 		btnDashboard.click();
 		return new Dashboard();
-	}	
+	}
+	
+	public void clickDropDownIceboxUserStory() {
+		dropDownUserStory.click();	
+	} 
 }

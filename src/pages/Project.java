@@ -26,7 +26,7 @@ public class Project {
 
 	@FindBy(xpath = "//form[@id='newProjectForm']/div/div[3]/div/select")
 	WebElement iterationLength;
-
+	
 	@FindBy(xpath = "//form[@id='newProjectForm']/div/div[6]/div/select")
 	WebElement numberOfDoneIterationsToShow;
 
@@ -85,11 +85,12 @@ public class Project {
 	 * @param strIterationLength
 	 * @return
 	 */
-	public UserStory createNewProject(String strNewProject,String strIterationLength) {
+	public UserStory createNewProject(String strNewProject,String strIterationLength, 
+			String strIterationsToShow) {
 		this.setNewProject(strNewProject);
 		this.setIterationLength(strIterationLength); 
+		this.setNumberOfDoneIterationsToShow(strIterationsToShow);
 		this.clickSave();   
-
 		return new UserStory();
 	}
 
