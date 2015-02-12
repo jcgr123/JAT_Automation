@@ -54,5 +54,9 @@
 	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/libs/xercesImpl-2.11.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/libs/xml-apis-1.4.01.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/jexcelapi/jxl.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/reportng-1.1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/testng-6.8.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/velocity-dep-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/guice-3.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

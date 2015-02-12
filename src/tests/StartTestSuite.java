@@ -3,8 +3,8 @@ package tests;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
-import pages.Login;
-import pages.Logout;
+import framework.pages.Login;
+import framework.pages.Logout;
 
 /**
  *  * 

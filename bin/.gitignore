@@ -1,4 +1,8 @@
-/tests/
-/parameters/
+/common/
+/utils/
 /excelFiles/
-/testNGReport/
+/tests/
+/framework/
+/pages/
+/parameters/
+/config/

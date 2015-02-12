@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Project"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="4.181">
+  <properties />
+  
+  
+            <testcase name="verifyNewProjectIsUpdatedCorrectly" time="4.181" classname="tests.TestUpdateProject" />
+      
+</testsuite>

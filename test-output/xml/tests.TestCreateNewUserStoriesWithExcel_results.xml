@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Project"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="12.158">
+  <properties />
+  
+  
+            <testcase name="verifyNewUserStoryIsCreatedWithTasksCorrectly" time="4.087" classname="tests.TestCreateNewUserStoriesWithExcel" />
+                <testcase name="verifyNewUserStoryIsCreatedWithTasksCorrectly" time="4.100" classname="tests.TestCreateNewUserStoriesWithExcel" />
+                <testcase name="verifyNewUserStoryIsCreatedWithTasksCorrectly" time="3.971" classname="tests.TestCreateNewUserStoriesWithExcel" />
+      
+</testsuite>

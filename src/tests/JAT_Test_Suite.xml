@@ -1,13 +1,14 @@
 <suite name="JAT_Test_Suite">
-     <test name = "Project">
-           <classes>
-                <class name="tests.StartTestSuite" />
-                <class name="tests.TestCreateNewProject" />  
-				<class name="tests.TestUpdateProject" />  
-				<class name="tests.TestCreateUserStoriesWithDataprovider" />
-				<class name="tests.TestCreateNewUserStoriesWithExcel" />
-                <class name="tests.TestCreateOneProjectWithThreeUserStoriesWithJXL" />              
-           </classes>
-      </test>
+	<listeners>
+         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+         <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+    <test name = "Project">
+         <classes>
+            <class name="tests.StartTestSuite" />
+            <class name="tests.TestCreateNewProject" />  
+			              
+         </classes>
+    </test>
 </suite>
 

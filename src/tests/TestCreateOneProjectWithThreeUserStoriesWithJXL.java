@@ -6,17 +6,14 @@ import java.util.Map;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import pages.AddStory;
-import pages.Dashboard;
-import pages.Project;
-import pages.UserStory;
-import testNGReport.realTimeReport.RealTimeReport;
-import excelFiles.ExcelSheetReader;
+import framework.pages.AddStory;
+import framework.pages.Dashboard;
+import framework.pages.Project;
+import framework.pages.UserStory;
+import framework.utils.ExcelSheetReader;
 
-@Listeners(RealTimeReport.class)
 public class TestCreateOneProjectWithThreeUserStoriesWithJXL {
 
 	/**
@@ -26,9 +23,8 @@ public class TestCreateOneProjectWithThreeUserStoriesWithJXL {
 	@BeforeClass
 	public void preConditions() throws Exception {	
 		ExcelSheetReader xlsFile = new ExcelSheetReader();	
-		List<Map<String, String>> listOfMaps = xlsFile.readExcel
-				("C:\\Users\\Carlos Guevara\\workspace\\JAT\\src\\tests\\resources\\Data.xls",
-						"ProjectData");
+		String filePath = System.getProperty("user.dir") + "\\src\\tests\\resources\\Data.xls";
+		List<Map<String, String>> listOfMaps = xlsFile.readExcel(filePath,"ProjectData");
 		Dashboard objDashboard = new Dashboard();	
 		Project objProject = objDashboard.clickNewProject();   
 		objProject.createNewProject(listOfMaps.get(0).get("Name"),
@@ -44,9 +40,8 @@ public class TestCreateOneProjectWithThreeUserStoriesWithJXL {
 	@Test
 	public void verifyNewUserStoriesAreCreatedCorrectly() throws Exception {   
 		ExcelSheetReader xlsFile = new ExcelSheetReader();	
-		List<Map<String, String>> listOfMaps = xlsFile.readExcel
-				("C:\\Users\\Carlos Guevara\\workspace\\JAT\\src\\tests\\resources\\Data.xls",
-						"StoryData");
+		String filePath = System.getProperty("user.dir") + "\\src\\tests\\resources\\Data.xls";
+		List<Map<String, String>> listOfMaps = xlsFile.readExcel(filePath,"StoryData");
 		UserStory objUserStory = new UserStory();
 
 		for(Map<String, String> list : listOfMaps){
