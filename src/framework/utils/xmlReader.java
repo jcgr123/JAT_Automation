@@ -12,7 +12,7 @@ public class xmlReader {
 
 		String result = "";
 		Properties prop = new Properties();
-		String propFileName = "configFile.xml";
+		String propFileName = "config.properties";
 
 		InputStream inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
 

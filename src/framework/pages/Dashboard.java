@@ -1,9 +1,12 @@
 package framework.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import framework.selenium.SeleniumDriverManager;
 
@@ -19,13 +22,15 @@ public class Dashboard {
 	@FindBy(xpath = "//ul/span[@title='email']")
 	WebElement userName;
 
-	@FindBy(xpath = "//div[2]/button")
+	//@FindBy(xpath = "//div[2]/button")
+	@FindBy(xpath = "html/body/div[1]/section/div/div/div/div/div[1]/div[2]/button")
 	WebElement btnNewProject;
 
 	@FindBy(xpath = "//td[7]/div/a")
 	WebElement deleteProject;
 
-	@FindBy(id = "button-0")
+	//@FindBy(id = "button-0")
+	@FindBy(xpath = "li/div/div[2]/button")
 	WebElement confirmDelete;
 
 	@FindBy(xpath = "//td[6]/div/a")
@@ -62,6 +67,7 @@ public class Dashboard {
 	 * Click on NewProject button   
 	 */
 	public  Dashboard deleteProject() {   	 
+		
 		deleteProject.click();
 		return this;
 	}
@@ -70,7 +76,12 @@ public class Dashboard {
 	 * Click on confirmation request  
 	 */
 	public  Dashboard confirmDelete() {   	 
-		confirmDelete.click();
+		
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		@SuppressWarnings("unused")
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.id("button-0")));
+		driver.findElement(By.id("button-0")).click();
+		//confirmDelete.click();
 		return this;
 	}
 
@@ -86,7 +97,12 @@ public class Dashboard {
 	 * Click on first project link   
 	 */
 	public  UserStory clickSelectFirstProject() {   	 
-		selectFirstProject.click();
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		@SuppressWarnings("unused")
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(@href, '')])[3]")));
+		driver.findElement(By.xpath("(//a[contains(@href, '')])[3]")).click();
+		//selectFirstProject.click();
+		
 		return new UserStory();
 	}
 }
