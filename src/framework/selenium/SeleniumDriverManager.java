@@ -29,23 +29,28 @@ public class SeleniumDriverManager {
 	 * Select a browser
 	 */
 	private void initializeDriver() {
-		//driver = new FirefoxDriver();
-		System.setProperty("webdriver.chrome.driver", 
-				System.getProperty("user.dir") + "\\lib\\chromedriver.exe");
-		driver = new ChromeDriver();
+		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		wait = new WebDriverWait(driver, 30, 100);
 	}
 
-	public void setup(String browser) {
+	public void setup(String browser) throws Exception {
 		if(browser.equalsIgnoreCase("firefox")) {
 			driver = new FirefoxDriver();
 		}else if(browser.equalsIgnoreCase("chrome")){
 			System.setProperty("webdriver.chrome.driver",("user.dir") + "\\lib\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}
+		else{
+			//If no browser passed throw exception
+			throw new Exception("Browser is not correct");
+		}
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+		wait = new WebDriverWait(driver, 30, 100);
 	}
 
 	public static SeleniumDriverManager getManager() {

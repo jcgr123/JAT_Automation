@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import framework.selenium.SeleniumDriverManager;
+import framework.utils.JSONReader;
 
 /**
  *  * 
@@ -26,12 +27,14 @@ public class Login {
 	WebElement login;
 
 	public Login() {
+		JSONReader objJSONReader = new JSONReader();
 		this.driver = SeleniumDriverManager.getManager().getDriver();
 		//This initElements method will create all WebElements
 		PageFactory.initElements(driver, this);
-		driver.get("http://172.20.8.22:3001/#/signin");
+		String url = objJSONReader.readJSON("url");
+		driver.get(url);
 	}
-
+	
 	/**
 	 * Set user email in textbox
 	 * @param strUserEmail

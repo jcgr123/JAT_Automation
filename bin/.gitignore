@@ -1,9 +1,3 @@
-/common/
-/utils/
-/excelFiles/
-/tests/
 /framework/
-/pages/
-/parameters/
+/tests/
 /config/
-/resources/

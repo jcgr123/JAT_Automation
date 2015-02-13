@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Map;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -50,13 +49,16 @@ public class TestUpdateProject {
 		UserStory objUserStory = objDashboard.clickSelectFirstProject();
 		//Verify New Project is created
 		Assert.assertTrue(objUserStory.getProjectName().contains(projectName));
-	}
-
-	@AfterClass
-	public void cleanEnvironment() {
-		UserStory objUserStory = new UserStory();
-		Dashboard objDashboard = objUserStory.clickDashboardBtn();
+		objDashboard = objUserStory.clickDashboardBtn();
 		objDashboard.deleteProject()	
 					.confirmDelete();
 	}
+
+//	@AfterClass
+//	public void cleanEnvironment() {
+//		UserStory objUserStory = new UserStory();
+//		Dashboard objDashboard = objUserStory.clickDashboardBtn();
+//		objDashboard.deleteProject()	
+//					.confirmDelete();
+//	}
 }
