@@ -59,8 +59,6 @@ public class Project {
 		@SuppressWarnings("unused")
 		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.id("newProjectForm")));
 		driver.findElement(By.xpath("//form[@id='newProjectForm']/div/div/div/input")).clear();
-		//		newProjectName.click();
-		//		newProjectName.clear();
 		newProjectName.sendKeys(strProjectName);        
 	}
 

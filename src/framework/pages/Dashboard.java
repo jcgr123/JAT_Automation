@@ -78,7 +78,6 @@ public class Dashboard {
 		@SuppressWarnings("unused")
 		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.id("button-0")));
 		driver.findElement(By.id("button-0")).click();
-		//confirmDelete.click();
 		return this;
 	}
 

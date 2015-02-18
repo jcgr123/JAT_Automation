@@ -80,7 +80,6 @@ public class AddStory {
 	 */
 	public UserStory setNewStoryState(String userStoryState) {
 		newUserStoryName.click();
-		//newUserStoryState.click();
 		newUserStoryState.sendKeys(userStoryState);
 		return new UserStory();
 	}
