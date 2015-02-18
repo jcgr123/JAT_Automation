@@ -5,6 +5,7 @@ import org.testng.annotations.BeforeSuite;
 
 import framework.pages.Login;
 import framework.pages.Logout;
+import framework.utils.JSONReader;
 
 /**
  *  * 
@@ -17,8 +18,9 @@ public class StartTestSuite {
 
 	@BeforeSuite
 	public void init() {
-		String userEmail = "Carlos.Guevara@fundacion-jala.org";
-		String userPassword = "Carlos.Guevara@fundacion-jala.org";
+		JSONReader objJSONReader = new JSONReader();
+		String userEmail = objJSONReader.readJSON("user");
+		String userPassword = objJSONReader.readJSON("password");
 		objlogin.loginToJAT(userEmail, userPassword);
 	}
 	@AfterSuite

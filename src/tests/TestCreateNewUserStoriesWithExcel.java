@@ -39,7 +39,8 @@ public class TestCreateNewUserStoriesWithExcel {
 	 * This test creates a new user Story with an .xlsx file data 
 	 * Verify the user story is created with the name provided
 	 */
-	@Test(dataProvider = "UserStoryData", dataProviderClass = DataproviderClass.class)
+	@Test(dataProvider = "UserStoryData", dataProviderClass = DataproviderClass.class,
+			groups = {"Acceptance"})
 	public void verifyNewUserStoryIsCreatedWithTasksCorrectly(String strNewStory, 
 			String strNewType,String strNewPoints, String strStoryState,
 			String strNewOwner, String strNewDescription, String strNewAcceptance) {		
@@ -53,7 +54,7 @@ public class TestCreateNewUserStoriesWithExcel {
 		//Verify New User Story is created
 		Assert.assertTrue(objUserStory.getUserStoryName().contains(strNewStory));	
 	}
-	
+
 	@AfterClass
 	public void cleanEnvironment() {
 		UserStory objUserStory = new UserStory();

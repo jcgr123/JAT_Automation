@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 
 import framework.pages.Dashboard;
 import framework.pages.Login;
+import framework.utils.JSONReader;
 
 
 /**
@@ -25,8 +26,9 @@ public class TestLoginWithPageFactory {
 	 */
 	@Test
 	public void verifyHomePageAppearCorrect() {
-		String userEmail = "Carlos.Guevara@fundacion-jala.org";
-		String userPassword = "Carlos.Guevara@fundacion-jala.org";
+		JSONReader objJSONReader = new JSONReader();
+		String userEmail = objJSONReader.readJSON("user");
+		String userPassword = objJSONReader.readJSON("password");
 		//Create Login Page object
 		Login objLogin = new Login();
 		//login to application

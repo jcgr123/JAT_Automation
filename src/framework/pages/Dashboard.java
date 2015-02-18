@@ -18,18 +18,16 @@ import framework.selenium.SeleniumDriverManager;
 public class Dashboard {
 
 	public WebDriver driver;
-	
+
 	@FindBy(xpath = "//ul/span[@title='email']")
 	WebElement userName;
 
-	//@FindBy(xpath = "//div[2]/button")
 	@FindBy(xpath = "html/body/div[1]/section/div/div/div/div/div[1]/div[2]/button")
 	WebElement btnNewProject;
 
 	@FindBy(xpath = "//td[7]/div/a")
 	WebElement deleteProject;
 
-	//@FindBy(id = "button-0")
 	@FindBy(xpath = "li/div/div[2]/button")
 	WebElement confirmDelete;
 
@@ -67,7 +65,7 @@ public class Dashboard {
 	 * Click on NewProject button   
 	 */
 	public  Dashboard deleteProject() {   	 
-		
+
 		deleteProject.click();
 		return this;
 	}
@@ -75,8 +73,7 @@ public class Dashboard {
 	/**
 	 * Click on confirmation request  
 	 */
-	public  Dashboard confirmDelete() {   	 
-		
+	public  Dashboard confirmDelete() {   	 	
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		@SuppressWarnings("unused")
 		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.id("button-0")));
@@ -99,10 +96,9 @@ public class Dashboard {
 	public  UserStory clickSelectFirstProject() {   	 
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		@SuppressWarnings("unused")
-		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(@href, '')])[3]")));
-		driver.findElement(By.xpath("//td/div/a")).click();
-		//selectFirstProject.click();
-		
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.
+				xpath("(//a[contains(@href, '')])[3]")));
+		driver.findElement(By.xpath("//td/div/a")).click();		
 		return new UserStory();
 	}
 }

@@ -11,15 +11,12 @@ import framework.utils.ReadExcelFile;
  * @author carlos guevara
  *
  */
-
 public class DataproviderClass {
-
 
 	/**
 	 *  Function is  reading data from this matrix
 	 * @return 
-	 */
-	 
+	 */ 
 	@DataProvider(name = "SearchProvider")
 	public static Object[][] getDataFromDataprovider() {
 		return new Object[][] {

@@ -10,10 +10,10 @@ import framework.selenium.SeleniumDriverManager;
 public class Logout {
 
 	public WebDriver driver;
-	
+
 	@FindBy(xpath = "//div/span")
 	WebElement dropdown;
-	
+
 	@FindBy(linkText = "Logout")
 	WebElement logoutLink;
 

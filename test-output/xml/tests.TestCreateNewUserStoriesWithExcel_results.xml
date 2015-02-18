@@ -4,12 +4,12 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="11.772">
+           time="13.094">
   <properties />
   
   
-            <testcase name="verifyNewUserStoryIsCreatedWithTasksCorrectly" time="3.448" classname="tests.TestCreateNewUserStoriesWithExcel" />
-                <testcase name="verifyNewUserStoryIsCreatedWithTasksCorrectly" time="3.663" classname="tests.TestCreateNewUserStoriesWithExcel" />
-                <testcase name="verifyNewUserStoryIsCreatedWithTasksCorrectly" time="4.661" classname="tests.TestCreateNewUserStoriesWithExcel" />
+            <testcase name="verifyNewUserStoryIsCreatedWithTasksCorrectly" time="3.703" classname="tests.TestCreateNewUserStoriesWithExcel" />
+                <testcase name="verifyNewUserStoryIsCreatedWithTasksCorrectly" time="4.218" classname="tests.TestCreateNewUserStoriesWithExcel" />
+                <testcase name="verifyNewUserStoryIsCreatedWithTasksCorrectly" time="5.173" classname="tests.TestCreateNewUserStoriesWithExcel" />
       
 </testsuite>

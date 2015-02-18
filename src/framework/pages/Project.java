@@ -29,7 +29,7 @@ public class Project {
 
 	@FindBy(xpath = "//form[@id='newProjectForm']/div/div[3]/div/select")
 	WebElement iterationLength;
-	
+
 	@FindBy(xpath = "//form[@id='newProjectForm']/div/div[6]/div/select")
 	WebElement numberOfDoneIterationsToShow;
 
@@ -54,13 +54,13 @@ public class Project {
 	 * @param strProjectName
 	 */
 	public void setNewProject(String strProjectName) {
-		
+
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		@SuppressWarnings("unused")
 		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.id("newProjectForm")));
 		driver.findElement(By.xpath("//form[@id='newProjectForm']/div/div/div/input")).clear();
-//		newProjectName.click();
-//		newProjectName.clear();
+		//		newProjectName.click();
+		//		newProjectName.clear();
 		newProjectName.sendKeys(strProjectName);        
 	}
 

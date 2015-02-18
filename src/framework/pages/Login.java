@@ -1,8 +1,8 @@
 package framework.pages;
 
-import org.openqa.selenium.WebDriver; 
-import org.openqa.selenium.WebElement; 
-import org.openqa.selenium.support.FindBy; 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import framework.selenium.SeleniumDriverManager;
@@ -34,7 +34,7 @@ public class Login {
 		String url = objJSONReader.readJSON("url");
 		driver.get(url);
 	}
-	
+
 	/**
 	 * Set user email in textbox
 	 * @param strUserEmail

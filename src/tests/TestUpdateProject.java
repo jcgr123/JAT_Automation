@@ -38,7 +38,7 @@ public class TestUpdateProject {
 	 * This test creates a new project  and updates it
 	 * Verify the project updated the name using User Story label
 	 */
-	@Test
+	@Test(groups = {"Acceptance"})
 	public void verifyNewProjectIsUpdatedCorrectly() {    	    	     
 		String projectName = "1stNewProjectUpdated";
 		String iterationsNumber = "3";
@@ -51,14 +51,6 @@ public class TestUpdateProject {
 		Assert.assertTrue(objUserStory.getProjectName().contains(projectName));
 		objDashboard = objUserStory.clickDashboardBtn();
 		objDashboard.deleteProject()	
-					.confirmDelete();
+		.confirmDelete();
 	}
-
-//	@AfterClass
-//	public void cleanEnvironment() {
-//		UserStory objUserStory = new UserStory();
-//		Dashboard objDashboard = objUserStory.clickDashboardBtn();
-//		objDashboard.deleteProject()	
-//					.confirmDelete();
-//	}
 }

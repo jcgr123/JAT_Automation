@@ -4,12 +4,12 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="11.334">
+           time="12.437">
   <properties />
   
   
-            <testcase name="testMethod" time="3.315" classname="tests.TestCreateUserStoriesWithDataprovider" />
-                <testcase name="testMethod" time="5.393" classname="tests.TestCreateUserStoriesWithDataprovider" />
-                <testcase name="testMethod" time="2.626" classname="tests.TestCreateUserStoriesWithDataprovider" />
+            <testcase name="testMethod" time="3.875" classname="tests.TestCreateUserStoriesWithDataprovider" />
+                <testcase name="testMethod" time="4.812" classname="tests.TestCreateUserStoriesWithDataprovider" />
+                <testcase name="testMethod" time="3.750" classname="tests.TestCreateUserStoriesWithDataprovider" />
       
 </testsuite>

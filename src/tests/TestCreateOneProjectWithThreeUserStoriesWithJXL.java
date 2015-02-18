@@ -37,7 +37,7 @@ public class TestCreateOneProjectWithThreeUserStoriesWithJXL {
 	 * Verify the User Story name using User Story label
 	 * @throws Exception
 	 */
-	@Test
+	@Test(groups = {"Acceptance"})
 	public void verifyNewUserStoriesAreCreatedCorrectly() throws Exception {   
 		ExcelSheetReader xlsFile = new ExcelSheetReader();	
 		String filePath = System.getProperty("user.dir") + "\\src\\tests\\resources\\Data.xls";

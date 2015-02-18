@@ -39,7 +39,8 @@ public class TestCreateUserStoriesWithDataprovider {
 	 * This test creates a new user story with a matrix of data 
 	 * Verify the user story is created with the name provided
 	 */
-	@Test(dataProvider = "SearchProvider", dataProviderClass = DataproviderClass.class)
+	@Test(dataProvider = "SearchProvider", dataProviderClass = DataproviderClass.class,
+			groups = {"Acceptance"})
 	public void testMethod(String strNewStory, String strNewType,
 			String strNewPoints, String strStoryState,
 			String strNewOwner, String strNewDescription,
@@ -60,6 +61,6 @@ public class TestCreateUserStoriesWithDataprovider {
 		UserStory objUserStory = new UserStory();
 		Dashboard objDashboard = objUserStory.clickDashboardBtn();
 		objDashboard.deleteProject()	
-					.confirmDelete();
+		.confirmDelete();
 	}
 }

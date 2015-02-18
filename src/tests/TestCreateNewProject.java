@@ -24,7 +24,7 @@ public class TestCreateNewProject {
 	 * This test creates a new project  
 	 * Verify the project name using User Story label
 	 */
-	@Test
+	@Test(groups = {"Acceptance"})
 	public void verifyNewProjectIsCreatedCorrectly() throws IOException {  
 		ExcelSheetReader xlsFile = new ExcelSheetReader();	
 		String filePath = System.getProperty("user.dir") + "\\src\\tests\\resources\\Data.xls";
@@ -38,7 +38,7 @@ public class TestCreateNewProject {
 			Assert.assertEquals(objUserStory.getProjectName(), list.get("Name"));
 			objDashboard = objUserStory.clickDashboardBtn();
 			objDashboard.deleteProject()
-						.confirmDelete();
+			.confirmDelete();
 		}
 	}
 }
