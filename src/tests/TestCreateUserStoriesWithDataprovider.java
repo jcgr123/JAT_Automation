@@ -18,7 +18,7 @@ import framework.utils.ExcelSheetReader;
 
 /**
  *  
- * @author carlos guevara
+ * @author Carlos Guevara
  *
  */
 public class TestCreateUserStoriesWithDataprovider {
@@ -41,10 +41,9 @@ public class TestCreateUserStoriesWithDataprovider {
 	 */
 	@Test(dataProvider = "SearchProvider", dataProviderClass = DataproviderClass.class,
 			groups = {"Acceptance"})
-	public void testMethod(String strNewStory, String strNewType,
-			String strNewPoints, String strStoryState,
-			String strNewOwner, String strNewDescription,
-			String strNewAcceptance) throws InterruptedException {
+	public void verifyAProjectWithUserStoriesIsCreatedWithDataproviderCorrectly(String strNewStory, 
+			String strNewType, String strNewPoints, String strStoryState, String strNewOwner, 
+			String strNewDescription, String strNewAcceptance) throws InterruptedException {
 
 		UserStory objUserStory = new UserStory();
 		AddStory objAddStory = objUserStory.clickNewStoryBtn();

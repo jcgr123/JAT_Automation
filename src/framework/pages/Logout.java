@@ -9,7 +9,7 @@ import framework.selenium.SeleniumDriverManager;
 
 public class Logout {
 
-	public WebDriver driver;
+	WebDriver driver;
 
 	@FindBy(xpath = "//div/span")
 	WebElement dropdown;

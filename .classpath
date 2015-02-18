@@ -3,8 +3,14 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/guice-3.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/jxl.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/reportng-1.1.4.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/selenium-java-2.44.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/selenium-java-2.44.0-srcs.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/testng-6.8.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/velocity-dep-1.4.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/poi-3.11/poi-3.11-20141221.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/poi-3.11/poi-examples-3.11-20141221.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/poi-3.11/poi-excelant-3.11-20141221.jar"/>
@@ -53,11 +59,5 @@
 	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/libs/xalan-2.7.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/libs/xercesImpl-2.11.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/libs/xml-apis-1.4.01.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/jexcelapi/jxl.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/reportng-1.1.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/testng-6.8.8.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/velocity-dep-1.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/guice-3.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Carlos Guevara/workspace/JAT/lib/json-simple-1.1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -14,7 +14,7 @@ import framework.selenium.SeleniumDriverManager;
  */
 public class UserStory {
 
-	public WebDriver driver;
+	WebDriver driver;
 
 	@FindBy(xpath = "//div[2]/div/div/div/div/div[3]")
 	WebElement userStoryName;
@@ -36,12 +36,16 @@ public class UserStory {
 		PageFactory.initElements(driver, this); 
 	}
 
+	/**
+	 * Function that returns the name of the project
+	 * @return
+	 */
 	public String getProjectName() {
 		return projectName.getText();
 	}
 
 	/**
-	 * Get user story name
+	 * function that returns user story name
 	 * @return 
 	 */
 	public String getUserStoryName() {
@@ -65,6 +69,9 @@ public class UserStory {
 		return new Dashboard();
 	}
 
+	/**
+	 * Function that clicks on the dropdown button for display user story information 
+	 */
 	public void clickDropDownIceboxUserStory() {
 		dropDownUserStory.click();	
 	} 

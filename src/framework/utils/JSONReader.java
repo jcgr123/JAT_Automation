@@ -5,7 +5,13 @@ import java.io.FileReader;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+/**
+ * 
+ * @author Carlos Guevara
+ *
+ */
 public class JSONReader {
+	
 	public String readJSON(String data) {
 		JSONParser parser = new JSONParser();
 		String value = "";

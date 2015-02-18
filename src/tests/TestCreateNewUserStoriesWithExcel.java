@@ -18,7 +18,7 @@ import framework.utils.ExcelSheetReader;
 
 /**
  *  * 
- * @author carlos guevara
+ * @author Carlos Guevara
  *
  */
 public class TestCreateNewUserStoriesWithExcel {
@@ -36,7 +36,7 @@ public class TestCreateNewUserStoriesWithExcel {
 	}
 
 	/*
-	 * This test creates a new user Story with an .xlsx file data 
+	 * This test creates a new user Story with an UserStoryData.xlsx file data 
 	 * Verify the user story is created with the name provided
 	 */
 	@Test(dataProvider = "UserStoryData", dataProviderClass = DataproviderClass.class,

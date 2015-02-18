@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="6.813">
+           time="8.115">
   <properties />
   
   
-            <testcase name="verifyNewProjectIsUpdatedCorrectly" time="6.813" classname="tests.TestUpdateProject" />
+            <testcase name="verifyNewProjectIsUpdatedCorrectly" time="8.115" classname="tests.TestUpdateProject" />
       
 </testsuite>

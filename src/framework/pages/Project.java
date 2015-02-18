@@ -11,8 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import framework.selenium.SeleniumDriverManager;
 
 /**
- *  * 
- * @author carlos guevara
+ *   
+ * @author Carlos Guevara
  *
  */
 public class Project {
@@ -43,7 +43,7 @@ public class Project {
 
 	/**
 	 * Get  NewProject Name 
-	 * @return
+	 * @return the name of the project
 	 */
 	public String getProjectDashboardName() {
 		return projectName.getText();
@@ -51,7 +51,7 @@ public class Project {
 
 	/**
 	 * Set project name in textbox   
-	 * @param strProjectName
+	 * @param strProjectName parameter to describe the name of the project
 	 */
 	public void setNewProject(String strProjectName) {
 
@@ -66,7 +66,7 @@ public class Project {
 
 	/**
 	 * Set IterationLength in IterationLength textbox 
-	 * @param strIterationLength
+	 * @param strIterationLength parameter to describe the lenght of the iteration
 	 */
 	public void setIterationLength(String strIterationLength) {
 		iterationLength.sendKeys(strIterationLength); 
@@ -74,7 +74,7 @@ public class Project {
 
 	/**
 	 * Set number of done iterations textbox 
-	 * @param strIterationsToShow
+	 * @param strIterationsToShow parameter to describe the number of iterations to display
 	 */
 	public void setNumberOfDoneIterationsToShow(String strIterationsToShow) {
 		numberOfDoneIterationsToShow.sendKeys(strIterationsToShow); 
@@ -104,7 +104,7 @@ public class Project {
 
 	/**
 	 * This method will allow to update a new project
-	 * @param strIterationLength
+	 * @param strIterationLength 
 	 * @param strNumberOfDoneIterations
 	 * @return
 	 */

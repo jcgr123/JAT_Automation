@@ -15,13 +15,13 @@ import framework.utils.ExcelSheetReader;
 
 /**
  *  
- * @author carlos guevara
+ * @author Carlos Guevara
  *
  */
 public class TestCreateNewProject {
 
 	/*
-	 * This test creates a new project  
+	 * This test creates a new project with data from data.xls file
 	 * Verify the project name using User Story label
 	 */
 	@Test(groups = {"Acceptance"})

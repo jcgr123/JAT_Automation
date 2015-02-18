@@ -15,7 +15,7 @@ import framework.utils.JSONReader;
  */
 public class Login {
 
-	public WebDriver driver;
+	WebDriver driver;
 
 	@FindBy(xpath = "//input[@type='text']")
 	WebElement userEmail;
@@ -69,8 +69,8 @@ public class Login {
 
 	/**
 	 * Method that allows the user to log into JAT
-	 * @param strUserEmail
-	 * @param strPassword
+	 * @param strUserEmail parameter to describe the users mail
+	 * @param strPassword parameter to describe the users password
 	 * @return
 	 */
 	public Dashboard loginToJAT(String strUserEmail,String strPassword) {

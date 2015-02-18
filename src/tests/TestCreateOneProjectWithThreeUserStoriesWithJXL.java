@@ -14,10 +14,15 @@ import framework.pages.Project;
 import framework.pages.UserStory;
 import framework.utils.ExcelSheetReader;
 
+/**
+ * 
+ * @author Carlos Guevara
+ *
+ */
 public class TestCreateOneProjectWithThreeUserStoriesWithJXL {
 
 	/**
-	 * This precondition creates a new project
+	 * This precondition creates a new project with info from data.xls
 	 * @throws Exception
 	 */
 	@BeforeClass
@@ -38,7 +43,7 @@ public class TestCreateOneProjectWithThreeUserStoriesWithJXL {
 	 * @throws Exception
 	 */
 	@Test(groups = {"Acceptance"})
-	public void verifyNewUserStoriesAreCreatedCorrectly() throws Exception {   
+	public void verifyOneprojectWithThreeNewUserStoriesAreCreatedCorrectly() throws Exception {   
 		ExcelSheetReader xlsFile = new ExcelSheetReader();	
 		String filePath = System.getProperty("user.dir") + "\\src\\tests\\resources\\Data.xls";
 		List<Map<String, String>> listOfMaps = xlsFile.readExcel(filePath,"StoryData");

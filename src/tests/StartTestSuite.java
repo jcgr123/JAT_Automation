@@ -9,7 +9,7 @@ import framework.utils.JSONReader;
 
 /**
  *  * 
- * @author carlos guevara
+ * @author Carlos Guevara
  *
  */
 public class StartTestSuite {

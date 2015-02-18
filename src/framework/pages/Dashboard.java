@@ -17,7 +17,7 @@ import framework.selenium.SeleniumDriverManager;
  */
 public class Dashboard {
 
-	public WebDriver driver;
+	WebDriver driver;
 
 	@FindBy(xpath = "//ul/span[@title='email']")
 	WebElement userName;
@@ -91,7 +91,7 @@ public class Dashboard {
 	}
 
 	/**
-	 * Click on first project link   
+	 * Click on first project link but waiting for it appears  
 	 */
 	public  UserStory clickSelectFirstProject() {   	 
 		WebDriverWait wait = new WebDriverWait(driver, 10);

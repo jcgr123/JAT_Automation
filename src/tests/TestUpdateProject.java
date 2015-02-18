@@ -15,10 +15,9 @@ import framework.utils.ExcelSheetReader;
 
 /**
  *  
- * @author carlos guevara
+ * @author Carlos Guevara
  *
  */
-
 public class TestUpdateProject {
 
 	@BeforeClass
@@ -39,7 +38,7 @@ public class TestUpdateProject {
 	 * Verify the project updated the name using User Story label
 	 */
 	@Test(groups = {"Acceptance"})
-	public void verifyNewProjectIsUpdatedCorrectly() {    	    	     
+	public void verifyANewProjectIsUpdatedCorrectly() {    	    	     
 		String projectName = "1stNewProjectUpdated";
 		String iterationsNumber = "3";
 		String doneIterationsToShow = "3";

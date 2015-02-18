@@ -11,6 +11,11 @@ import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
 
+/**
+ * 
+ * @author Carlos Guevara
+ *
+ */
 public class ExcelSheetReader {
 
 	public List<Map<String, String>> readExcel(String filePath, String sheetName) throws IOException {

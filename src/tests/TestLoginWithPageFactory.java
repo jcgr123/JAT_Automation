@@ -1,8 +1,7 @@
 package tests;
 
-import org.testng.Assert; 
-import org.testng.annotations.BeforeTest; 
-import org.testng.annotations.Test; 
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import framework.pages.Dashboard;
 import framework.pages.Login;
@@ -11,14 +10,10 @@ import framework.utils.JSONReader;
 
 /**
  *  * 
- * @author carlos guevara
+ * @author Carlos Guevara
  *
  */
 public class TestLoginWithPageFactory {
-
-	@BeforeTest
-	public void preConditions(){
-	}
 
 	/* This test go to http://172.20.8.22:3001/#/signin 
 	 * Login to application 

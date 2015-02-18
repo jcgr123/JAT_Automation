@@ -9,7 +9,7 @@ import framework.selenium.SeleniumDriverManager;
 
 /**
  *  * 
- * @author carlos guevara
+ * @author Carlos Guevara
  *
  */
 public class AddStory {
