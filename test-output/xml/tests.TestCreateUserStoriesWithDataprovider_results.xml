@@ -4,12 +4,12 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="13.989">
+           time="8.176">
   <properties />
   
   
-            <testcase name="testMethod" time="3.460" classname="tests.TestCreateUserStoriesWithDataprovider" />
-                <testcase name="testMethod" time="6.149" classname="tests.TestCreateUserStoriesWithDataprovider" />
-                <testcase name="testMethod" time="4.380" classname="tests.TestCreateUserStoriesWithDataprovider" />
+            <testcase name="verifyAProjectWithUserStoriesIsCreatedWithDataproviderCorrectly" time="4.054" classname="tests.TestCreateUserStoriesWithDataprovider" />
+                <testcase name="verifyAProjectWithUserStoriesIsCreatedWithDataproviderCorrectly" time="2.369" classname="tests.TestCreateUserStoriesWithDataprovider" />
+                <testcase name="verifyAProjectWithUserStoriesIsCreatedWithDataproviderCorrectly" time="1.753" classname="tests.TestCreateUserStoriesWithDataprovider" />
       
 </testsuite>

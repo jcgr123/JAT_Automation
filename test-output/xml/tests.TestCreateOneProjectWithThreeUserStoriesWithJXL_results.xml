@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="13.203">
+           time="8.564">
   <properties />
   
   
-            <testcase name="verifyNewUserStoriesAreCreatedCorrectly" time="13.203" classname="tests.TestCreateOneProjectWithThreeUserStoriesWithJXL" />
+            <testcase name="verifyOneprojectWithThreeNewUserStoriesAreCreatedCorrectly" time="8.564" classname="tests.TestCreateOneProjectWithThreeUserStoriesWithJXL" />
       
 </testsuite>

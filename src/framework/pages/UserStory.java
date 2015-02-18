@@ -1,9 +1,12 @@
 package framework.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import framework.selenium.SeleniumDriverManager;
 
@@ -49,6 +52,11 @@ public class UserStory {
 	 * @return 
 	 */
 	public String getUserStoryName() {
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		@SuppressWarnings("unused")
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.
+				xpath("//div[2]/div/div/div/div/div[3]")));
+		//driver.findElement(By.xpath("//nav[2]/div/a")).click();
 		return userStoryName.getText();
 	}
 
@@ -56,8 +64,13 @@ public class UserStory {
 	 * Click on +Add Story button   
 	 * @return
 	 */
-	public AddStory clickNewStoryBtn() {   	 
-		btnAddStory.click();
+	public AddStory clickNewStoryBtn() {   
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		@SuppressWarnings("unused")
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.
+				id("newUserStory_link")));
+		driver.findElement(By.xpath("//nav[2]/div/a")).click();
+		//btnAddStory.click();
 		return new AddStory();
 	}
 

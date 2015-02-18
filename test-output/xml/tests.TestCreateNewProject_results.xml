@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="20.291">
+           time="17.422">
   <properties />
   
   
-            <testcase name="verifyNewProjectIsCreatedCorrectly" time="20.291" classname="tests.TestCreateNewProject" />
+            <testcase name="verifyNewProjectIsCreatedCorrectly" time="17.422" classname="tests.TestCreateNewProject" />
       
 </testsuite>
