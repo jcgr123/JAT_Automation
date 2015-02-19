@@ -2,15 +2,16 @@
 	<listeners>
          <listener class-name="org.uncommons.reportng.HTMLReporter"/>
          <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+         <listener class-name="tests.utils.ReportNGListener"/>
     </listeners>
     <test name = "Project">
          <classes>
-            <class name="tests.StartTestSuite" />
+            <class name="tests.StartTestSuite" />  
             <class name="tests.TestCreateNewProject" />
+            <class name="tests.TestUpdateProject" />
 			<class name="tests.TestCreateUserStoriesWithDataprovider" />
 			<class name="tests.TestCreateNewUserStoriesWithExcel" />
             <class name="tests.TestCreateOneProjectWithThreeUserStoriesWithJXL" />
-            <class name="tests.TestUpdateProject" />  
           </classes>
     </test>
 </suite>

@@ -41,7 +41,7 @@ public class TestCreateNewUserStoriesWithExcel {
 	 */
 	@Test(dataProvider = "UserStoryData", dataProviderClass = DataproviderClass.class,
 			groups = {"Acceptance"})
-	public void verifyNewUserStoryIsCreatedWithTasksCorrectly(String strNewStory, 
+	public void verifyNewUserStoryIsCreatedWithExcelCorrectly(String strNewStory, 
 			String strNewType,String strNewPoints, String strStoryState,
 			String strNewOwner, String strNewDescription, String strNewAcceptance) {		
 

@@ -18,6 +18,7 @@ import framework.selenium.SeleniumDriverManager;
 public class Dashboard {
 
 	WebDriver driver;
+	WebDriverWait wait = SeleniumDriverManager.getManager().getWait();
 
 	@FindBy(xpath = "//ul/span[@title='email']")
 	WebElement userName;
@@ -34,7 +35,7 @@ public class Dashboard {
 	@FindBy(xpath = "//td[6]/div/a")
 	WebElement updateProject;
 
-	@FindBy(xpath = "//td/div/a")
+	@FindBy(xpath = "html/body/div[1]/section/div/div/div/div/div[2]/table/tbody/tr[1]/td[1]/div/a")
 	WebElement selectFirstProject;
 
 	@FindBy(xpath = "//ul/span[@title='email']")
@@ -57,6 +58,10 @@ public class Dashboard {
 	 * Click on NewProject button   
 	 */
 	public  Project clickNewProject() {   	 
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		@SuppressWarnings("unused")
+		WebElement element = wait.until(ExpectedConditions. elementToBeClickable(By.
+				xpath("html/body/div[1]/section/div/div/div/div/div[1]/div[2]/button")));
 		btnNewProject.click();		
 		return new Project();
 	}
@@ -65,7 +70,9 @@ public class Dashboard {
 	 * Click on NewProject button   
 	 */
 	public  Dashboard deleteProject() {   	 
-
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		@SuppressWarnings("unused")
+		WebElement element = wait.until(ExpectedConditions. elementToBeClickable(By.xpath("//td[7]/div/a")));
 		deleteProject.click();
 		return this;
 	}
@@ -92,12 +99,11 @@ public class Dashboard {
 	/**
 	 * Click on first project link but waiting for it appears  
 	 */
-	public  UserStory clickSelectFirstProject() {   	 
-		WebDriverWait wait = new WebDriverWait(driver, 10);
+	public UserStory clickSelectFirstProject() {  
+		WebDriverWait wait = new WebDriverWait(driver, 50);
 		@SuppressWarnings("unused")
-		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.
-				xpath("//td/div/a")));
-		driver.findElement(By.xpath("(//a[contains(@href, '')])[3]")).click();		
+		WebElement element = wait.until(ExpectedConditions.visibilityOf(selectFirstProject));
+		selectFirstProject.click();		
 		return new UserStory();
 	}
 }

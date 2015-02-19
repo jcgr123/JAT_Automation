@@ -44,6 +44,10 @@ public class UserStory {
 	 * @return
 	 */
 	public String getProjectName() {
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		@SuppressWarnings("unused")
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.
+				xpath("//div[2]/div/section/div[2]")));
 		return projectName.getText();
 	}
 
@@ -56,7 +60,6 @@ public class UserStory {
 		@SuppressWarnings("unused")
 		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.
 				xpath("//div[2]/div/div/div/div/div[3]")));
-		//driver.findElement(By.xpath("//nav[2]/div/a")).click();
 		return userStoryName.getText();
 	}
 
@@ -69,8 +72,8 @@ public class UserStory {
 		@SuppressWarnings("unused")
 		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.
 				id("newUserStory_link")));
-		driver.findElement(By.xpath("//nav[2]/div/a")).click();
-		//btnAddStory.click();
+//		driver.findElement(By.xpath("//nav[2]/div/a")).click();
+		btnAddStory.click();
 		return new AddStory();
 	}
 
