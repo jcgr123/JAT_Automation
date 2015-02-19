@@ -96,8 +96,8 @@ public class Dashboard {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		@SuppressWarnings("unused")
 		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.
-				xpath("(//a[contains(@href, '')])[3]")));
-		driver.findElement(By.xpath("//td/div/a")).click();		
+				xpath("//td/div/a")));
+		driver.findElement(By.xpath("(//a[contains(@href, '')])[3]")).click();		
 		return new UserStory();
 	}
 }

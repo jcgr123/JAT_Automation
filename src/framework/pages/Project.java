@@ -54,7 +54,6 @@ public class Project {
 	 * @param strProjectName parameter to describe the name of the project
 	 */
 	public void setNewProject(String strProjectName) {
-
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		@SuppressWarnings("unused")
 		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.id("newProjectForm")));

@@ -1,9 +1,12 @@
 package framework.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import framework.selenium.SeleniumDriverManager;
 
@@ -54,8 +57,13 @@ public class AddStory {
 	 * @param userStoryName contains the name of the user story 
 	 */
 	public void setNewStoryName(String userStoryName) {
-		newUserStoryName.click();
-		newUserStoryName.sendKeys(userStoryName);        
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		@SuppressWarnings("unused")
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.id("us-title")));
+		driver.findElement(By.id("us-title")).click();
+		newUserStoryName.sendKeys(userStoryName); 		
+//		newUserStoryName.click();
+//		newUserStoryName.sendKeys(userStoryName);        
 	}
 
 	/**
